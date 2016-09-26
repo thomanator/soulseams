@@ -1,15 +1,25 @@
 {
-  "name": "soulseams",
+  "name": "soul-seams",
   "version": "1.0.0",
-  "description": "The web app for the brand soul seams",
-  "main": "index.js",
-  "dependencies": {
-    "express": "^4.14.0"
-  },
-  "devDependencies": {},
+  "description": "Web App",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lite": "lite-server",
+    "test": "node server.js",
+    "start": "node server.js"
   },
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomanator/SoulSeams.git"
+  },
+  "author": "Shilpa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomanator/SoulSeams/issues"
+  },
+  "homepage": "https://github.com/thomanator/SoulSeams#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "lite-server": "^2.2.2"
+  }
 }
