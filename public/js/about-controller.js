@@ -34,7 +34,7 @@
           $timeout(function() {
           $scope.showText = false;
             $state.go(toState, toParams);
-          }, 1000);
+          }, 900);
         }, 1000)
       }
       console.log(toState);
