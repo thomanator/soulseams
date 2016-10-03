@@ -1,4 +1,15 @@
-<div class="color-white">
-  <div> We make cloths </div>
-  <div>that <span class="color-yellow">matter</span></div>
+<div class="color-white child content-home" ng-controller="homeController">
+  <!-- <input type="checkbox" ng-model="showDiv" id="showDiv" />  -->
+  <div class="col-xs-12" style="height:2px;margin-bottom: 30px;">
+    <div class="line background-color-yellow" style="float: right" ng-class="{'remove': !showDiv, 'line-animation-right-25' : showDiv}"></div>  
+  </div>
+  <div class="col-xs-12 caption" ng-class="{'fadeInUp': showText && !removeText, 'fadeOutDown': removeText}" style="height: 150px">
+    <div class="col-xs-12" ng-show="showText">
+      <div> We make clothes </div>
+      <div style="float: right;">that <span class="color-yellow bold" style="font-size: 50px;">matter</span></div>
+    </div>
+  </div>
+  <div class="col-xs-12" style="height: 2px;margin-top: 100px;">
+    <div class="line background-color-white" style="float: left;" ng-class="{'remove': !showDiv, 'line-animation-right-75': showDiv}"></div>
+  </div>
 </div>

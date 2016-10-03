@@ -1,5 +1,27 @@
-<div class="color-white">
-  <div> A Good Day </div>
-  <div>abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz</div>
-  <div> A Good Day Today, A Better Tomorrow</div>
+<div class="color-white col-xs-12 content-about" ng-controller="aboutController">
+  <!-- <input type="checkbox" ng-model="showDiv" id="showDiv" />  -->
+  <div class="caption inline" style="min-width: 212px;margin-bottom: 20px; min-height:70px; position: relative;"> 
+    <div ng-class="{'fadeInUp': showText && !removeText, 'fadeOut': removeText}" ng-show="showText">
+      A <span class="color-yellow medium"> Good </span> Day
+    </div>
+    <div class="col-xs-12 no-padding" style="height:2px; position: absolute;bottom: 0px;">
+      <div class="line background-color-yellow line-left" ng-class="{'remove': !showDiv, 'line-animation-right-60': showDiv, 'line-right': !showDiv}"></div>  
+    </div>
+  </div>
+  <div class="col-xs-12 no-padding" ng-class="{'fadeInUp': showText && !removeText, 'fadeOut': removeText}">
+    <div class="col-xs-12 no-padding heading-20" ng-show="showText">
+      <div> 'A Good Day' promises a proportion of the proceeds from all over customer projects towards making clothes for children who need them. Our aim is to give each child the experience of getting to pick up what they'd like to wear and more importantly give them a good day. </div>
+      <br/> <br/>
+      <div class="heading-24">A Good Day Today, A <span class="color-yellow bold">Better Day Tomorrow</span>!</div>
+    </div>
+  </div>  
+  <!-- <div class="col-xs-12" style="margin-top: 110px;"></div> -->
+  <div class="note" ng-class="{'fadeIn': showNote}">
+    <div ng-show="showNote">  
+      BE A PART OF IT
+    </div>
+  </div>
+  <div class="col-xs-12 no-padding" style="height: 2px;">
+    <div class="line background-color-white line-left" style="margin-left: 25%" ng-class="{'remove': !showDiv, 'line-animation-right-75': showLine, 'line-right': !showDiv}"></div>
+  </div>
 </div>

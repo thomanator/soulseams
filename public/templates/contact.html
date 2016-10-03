@@ -1,4 +1,4 @@
-<div> 
+<!-- <div> 
   Contact Us
   <div class='nopadding col-xs-12 space'>
       <div class='nopadding-left col-xs-2'>First Name</div>
@@ -32,4 +32,29 @@
           </div>
       </div>
     </div>
+</div> -->
+<div class="color-white content-about" ng-controller="homeController">
+  <!-- <input type="checkbox" ng-model="showDiv" id="showDiv" />  -->
+  <div class="col-xs-12 heading-30" ng-class="{'fadeInUp': showText && !removeText, 'fadeOutDown': removeText}" style="height: 150px">
+    <div class="col-xs-12" ng-show="showText">
+      <div class="col-sm-7 col-xs-12">
+        <div> Drop you <span class="color-yellow bold">details</span></div>  
+        <br/>
+        <input type="text" name="name" class="custom-input form-control" placeholder="Name">
+        <input type="number" name="number" class="custom-input form-control" placeholder="Contact Number">
+        <input type="email" name="email" class="custom-input form-control" placeholder="Email ID">
+        <input type="date" name="deliveryDate" class="custom-input form-control" placeholder="Expected delivery date">
+        <input type="number" name="count" class="custom-input form-control" placeholder="Expected number of units">
+        <button class="btn background-color-yellow color-white"> Submit </button>
+      </div>
+      <div class="col-sm-3 col-xs-12 pull-right">
+        <div style="margin-bottom: 40px"> Contact <span class="color-yellow bold">Us</span></div> 
+        <div class="heading-20"> Write to us at</div>
+        <div class="color-yellow heading-24"> info@soulseams.com</div>
+        <div class="heading-20" style="margin-top: 30px">Call us on</div>
+        <div class="heading-24">+91 <span class="color-yellow">8050635913</span></div>
+        <div class="heading-24">+91 <span class="color-yellow">9567125320</span></div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,0 +1,37 @@
+(function () {
+  angular
+    .module('app')
+    .controller('homeController', homeController);
+
+  homeController.$inject = ['$scope', '$timeout', '$rootScope', '$state'];
+
+  function homeController ($scope, $timeout, $rootScope, $state) {
+    $scope.showDiv = false;
+    $scope.showText = false;
+    $scope.removeText = false;
+    $timeout(function() {
+      $scope.showDiv = true; 
+      $timeout(function() {
+        $scope.showText = true; 
+      }, 1150);
+    }, 5);
+
+    var unRegisterListener = $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
+      if($scope.showDiv) {
+        event.preventDefault();
+        $scope.showDiv = false;
+        $scope.removeText = true;
+        $timeout(function() {
+          $scope.showText = false;
+          $state.go(toState, toParams);
+        }, 1000)
+      }
+      console.log(toState);
+    });
+
+    $scope.$on('$destroy', function() {
+      unRegisterListener();
+    });
+
+  }
+})()

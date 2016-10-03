@@ -15,7 +15,7 @@
         url: '/',
         templateUrl: '/templates/home.html'
       })
-      .state('aGoodDay', {
+      .state('about', {
         url: '/about',
         templateUrl: '/templates/aGoodDay.html'
       })

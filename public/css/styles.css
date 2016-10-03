@@ -3,9 +3,78 @@
   src: url(/font/GothamNarrow-Blod.otf) format('otf');
 } 
 
+@font-face {
+  font-family: 'gotham-medium';
+  src: url(/font/GothamNarrow-Medium.otf) format('otf');
+} 
+
+@font-face {
+  font-family: 'gotham-book';
+  src: url(/font/GothamNarrow-BookItalic.otf) format('otf');
+} 
+
+@font-face {
+  font-family: 'gotham-black';
+  src: url(/font/GothamNarrow-Black.otf) format('otf');
+} 
+
+.parent {
+  position: relative;
+}
+
+.line {
+  height: 2px;
+  width: 0px;
+}
+
+.line-left {
+  float: left;
+}
+
+.line-right {
+  float: right;
+}
+
+.child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.navbar-inverse, .navbar-nav {
+  font-size: 12px;
+  font-weight: 600;
+  background-color: #101010;
+  border-color: #101010;
+}
+
+.nav>li>a {
+  color: #9d9d9d;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+  text-decoration: none;
+  background-color: #101010;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.heading-20 {
+  font-size: 18px;
+}
+
+.heading-24 {
+  font-size: 24px;
+}
+
+.heading-30 {
+  font-size: 30px;
+}
+
 body {
   background-color: #101010;
-  font-family: 'gotham-bold';
+  font-family: 'gotham-medium';
   margin: 0px;
   color: white;
 }
@@ -18,6 +87,7 @@ html,body {
 footer {
   position: fixed;
   bottom: 0;
+  width: 100%;
 }
 
 .content {
@@ -25,6 +95,92 @@ footer {
   /*margin-right: 200px;*/
   height: 100%;
   width: 100%;
+  margin: auto;
+}
+
+.content-home {
+  width: 50%;
+  max-width: 500px;
+}
+
+.content-about {
+  width: 90%;
+  padding: 10%;  
+}
+
+.custom-input {
+  position: relative;
+}
+
+.custom-input > div {
+  position: absolute;
+  /*width: 100%;
+  height: 100%;*/
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 10;
+  background-color: #ffffff;
+  opacity: 0.1;
+}
+
+.custom-input {
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075) !important;
+  /*font-weight: 600;*/
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: #dadada;
+  font-size: 16px;
+  z-index: 100;
+  /*background-color: transparent;*/
+  background-color: rgba(241,241,241, 0.04);
+  border: 0px; 
+}
+
+.caption {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.note {
+  width: 110px;
+  height: 25px;
+  margin-top: 100px;
+  /*opacity: 0;*/
+  float: right;
+  overflow: hidden;
+}
+
+.no-padding {
+  padding: 0px;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.custom-li {
+  float: right;
+}
+
+@media screen and (max-width: 768px) {
+  .content-home {
+    width: 90%;
+  }
+
+  .custom-nav {
+    width: 100%;
+  }
+
+  .custom-li{
+    width: 50% !important; 
+    float: left;
+  }
+}
+
+.bold {
+  font-family: 'gotham-bold';
 }
 
 .color-white {
@@ -35,82 +191,93 @@ footer {
   color: #ec962c !important;
 }
 
-
-.page-animation.ng-enter { 
-  animation: slideInRight 1s both ease-in; 
+.background-color-white {
+  background-color: #ffffff !important;
 }
+
+.background-color-yellow {
+  background-color: #ec962c !important;
+}
+
+/*.page-animation.ng-enter { 
+  animation: slideInRight 1s both ease-in; 
+}*/
+
+/*.caption > div {
+
+}*/
+
+.fadeInUp {
+  -webkit-animation-delay: 3s; /* Chrome, Safari, Opera */
+  animation-delay: 3s;
+  animation: fadeInUp 1s both ease-in;
+}
+
+.line-animation-right-25 { 
+  width: 25%;
+  -webkit-transition: width 1s ease-in; /* For Safari 3.1 to 6.0 */
+  transition: width 1s ease-in; 
+}
+
+/*.line-animation-right-25 { 
+  width: 0%;
+}*/
+
+.remove {
+  width: 0px !important;
+  webkit-transition: width 1s ease-in; /* For Safari 3.1 to 6.0 */
+  transition: width 1s ease-in; 
+}
+
+.line-animation-right-75 { 
+  width: 75%;
+  -webkit-transition: width 1s ease-in; /* For Safari 3.1 to 6.0 */
+  transition: width 1s ease-in; 
+}
+
+.line-animation-right-60 { 
+  margin-left: 40%;
+  width: 60%;
+  -webkit-transition: width 1s ease-in; /* For Safari 3.1 to 6.0 */
+  transition: width 1s ease-in; 
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation: fadeIn 1s ease-in;
+  animation: fadeIn 1s ease-in;
+}
+
+/*.line-animation-right-75.ng-enter { 
+  width: 0%;
+}*/
 
 /*  animations    */
-
-@-webkit-keyframes slideInRight {
-  from {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-    visibility: visible;
-  }
-
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-    visibility: visible;
-  }
-
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.slideInRight {
-  -webkit-animation-name: slideInRight;
-  animation-name: slideInRight;
-}
-
-@-webkit-keyframes slideInLeft {
-  from {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-    visibility: visible;
-  }
-
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-    visibility: visible;
-  }
-
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.slideInLeft {
-  -webkit-animation-name: slideInLeft;
-  animation-name: slideInLeft;
-}
-
-
 
 @-webkit-keyframes fadeInUp {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 15px, 0);
+    transform: translate3d(0, 15px, 0);
   }
 
   to {
@@ -123,8 +290,8 @@ footer {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 15px, 0);
+    transform: translate3d(0, 15px, 0);
   }
 
   to {
@@ -135,6 +302,62 @@ footer {
 }
 
 .fadeInUp {
-  -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
+  -webkit-animation: fadeInUp 1s ease-in;
+  animation: fadeInUp 1s ease-in;
 }
+
+
+@-webkit-keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+}
+
+.fadeOutDown {
+  -webkit-animation: fadeOutDown 1s ease-in;
+  animation: fadeOutDown 1s ease-in;
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation: fadeOut 1s ease-in;
+  animation: fadeOut 1s ease-in;
+}
+
