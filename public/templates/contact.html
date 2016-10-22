@@ -1,39 +1,4 @@
-<!-- <div> 
-  Contact Us
-  <div class='nopadding col-xs-12 space'>
-      <div class='nopadding-left col-xs-2'>First Name</div>
-      <div class='nopadding-left col-xs-4'>
-        <input type='text' class='form-control' name="firstName" ng-model='adu.userinfo.firstName' name="firstname" required ng-class="{ 'has-error': (adduserForm.firstName.$touched && adduserForm.firstName.$invalid) || (submitted && adduserForm.firstName.$invalid)}" autocomplete="off">
-        <div class="help-block" ng-messages="adduserForm.firstName.$error" ng-if="adduserForm.firstName.$touched || (submitted && adduserForm.firstName.$invalid)">
-          <div ng-messages-include="/component/messages/messages.html"></div>
-        </div>
-      </div>
-      <div class='nopadding-left col-xs-2 '><div>Last Name</div></div>
-      <div class='nopadding-left col-xs-4'>
-        <input type='text' class='form-control' ng-model='adu.userinfo.lastName' required name="lastName" ng-class="{ 'has-error': (adduserForm.lastName.$touched && adduserForm.lastName.$invalid) || (submitted && adduserForm.lastName.$invalid)}" autocomplete="off">
-        <div class="help-block" ng-messages="adduserForm.lastName.$error" ng-if="adduserForm.lastName.$touched || (submitted && adduserForm.lastName.$invalid)">
-          <div ng-messages-include="/component/messages/messages.html"></div>
-        </div>
-      </div>
-    </div>
-    <div class='nopadding col-xs-12 space'>
-      <div class='nopadding-left col-xs-2'><div>Email</div></div>
-      <div class='nopadding-left col-xs-4'>
-        <input type='email' class='form-control' ng-model='adu.userinfo.email' required name="email" ng-class="{ 'has-error': (adduserForm.email.$touched && adduserForm.email.$invalid) || (submitted && adduserForm.email.$invalid)}" autocomplete="off">
-        <div class="help-block" ng-messages="adduserForm.email.$error" ng-if="adduserForm.email.$touched || (submitted && adduserForm.email.$invalid)">
-          <div ng-messages-include="/component/messages/messages.html"></div>
-        </div>
-      </div>
-      <div class='nopadding-left col-xs-2'><div>Phone</div></div>
-      <div class='nopadding-left col-xs-4'>
-        <input type='number' class='form-control' ng-model='adu.userinfo.mobile' required name="phoneNumber" ng-class="{ 'has-error': (adduserForm.phoneNumber.$touched && adduserForm.phoneNumber.$invalid) || (submitted && adduserForm.phoneNumber.$invalid)}" ng-minlength="10" ng-maxlength="10" autocomplete="off">
-          <div class="help-block" ng-messages="adduserForm.phoneNumber.$error" ng-if="adduserForm.phoneNumber.$touched || (submitted && adduserForm.phoneNumber.$invalid)">
-            <div ng-messages-include="/component/messages/messages.html"></div>
-          </div>
-      </div>
-    </div>
-</div> -->
-<div class="color-white content-about" ng-controller="homeController">
+<div class="color-white content-about" ng-controller="contactController">
   <!-- <input type="checkbox" ng-model="showDiv" id="showDiv" />  -->
   <div class="col-xs-12 heading-30" ng-class="{'fadeInUp': showText && !removeText, 'fadeOutDown': removeText}" style="height: 150px">
     <div class="col-xs-12" ng-show="showText">
@@ -47,7 +12,7 @@
         <input type="number" name="count" class="custom-input form-control" placeholder="Expected number of units">
         <button class="btn background-color-yellow color-white"> Submit </button>
       </div>
-      <div class="col-sm-3 col-xs-12 pull-right">
+      <div class="col-sm-3 col-xs-12 pull-right hidden-xs">
         <div style="margin-bottom: 40px"> Contact <span class="color-yellow bold">Us</span></div> 
         <div class="heading-20"> Write to us at</div>
         <div class="color-yellow heading-24"> info@soulseams.com</div>

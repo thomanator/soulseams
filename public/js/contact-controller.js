@@ -9,6 +9,7 @@
     $scope.showDiv = false;
     $scope.showText = false;
     $scope.removeText = false;
+    $rootScope.module = 'partner';
     $timeout(function() {
       $scope.showText = true; 
       // $timeout(function() {

@@ -11,6 +11,7 @@
     $scope.removeText = false;
     $scope.showLine = false;
     $scope.showNote = false;
+    $rootScope.module = 'about';
     $timeout(function() {
       $scope.showDiv = true; 
       $timeout(function() {

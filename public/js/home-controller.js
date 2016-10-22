@@ -3,12 +3,13 @@
     .module('app')
     .controller('homeController', homeController);
 
-  homeController.$inject = ['$scope', '$timeout', '$rootScope', '$state'];
+  homeController.$inject = ['$scope', '$timeout', '$rootScope', '$state', '$window'];
 
-  function homeController ($scope, $timeout, $rootScope, $state) {
+  function homeController ($scope, $timeout, $rootScope, $state, $window) {
     $scope.showDiv = false;
     $scope.showText = false;
     $scope.removeText = false;
+    $rootScope.module = 'home';
     $timeout(function() {
       $scope.showDiv = true; 
       $timeout(function() {
@@ -27,6 +28,22 @@
         }, 1000)
       }
       console.log(toState);
+    });
+
+    $scope.lastScrollTop = 0;
+    $scope.direction = "";
+    
+    angular.element($window).bind("scroll", function() {
+      $scope.st = window.pageYOffset;
+      if ($scope.st > $scope.lastScrollTop) {
+        $scope.direction = "down";
+      } else {
+        $scope.direction = "up";
+      }
+
+      $scope.lastScrollTop = $scope.st;
+      $scope.$apply();
+      console.log($scope.direction);
     });
 
     $scope.$on('$destroy', function() {

@@ -23,6 +23,10 @@
         url: '/contact',
         templateUrl: '/templates/contact.html'
       })
+      .state('partner', {
+        url: '/partner',
+        templateUrl: '/templates/partner.html'
+      })
   }
 
 }) ()
