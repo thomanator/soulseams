@@ -14,7 +14,7 @@
       $scope.showDiv = true; 
       $timeout(function() {
         $scope.showText = true; 
-      }, 1150);
+      }, 300);
     }, 5);
 
     var unRegisterListener = $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
@@ -30,23 +30,24 @@
       console.log(toState);
     });
 
-    $scope.lastScrollTop = 0;
-    $scope.direction = "";
-    
-    angular.element($window).bind("scroll", function() {
-      $scope.st = window.pageYOffset;
-      if ($scope.st > $scope.lastScrollTop) {
-        $scope.direction = "down";
-      } else {
-        $scope.direction = "up";
-      }
+    // $scope.lastScrollTop = 0;
+    // $scope.direction = "";
 
-      $scope.lastScrollTop = $scope.st;
-      $scope.$apply();
-      console.log($scope.direction);
-    });
+    // angular.element($window).bind("scroll", function() {
+    //   $scope.st = window.pageYOffset;
+    //   if ($scope.st > $scope.lastScrollTop) {
+    //     $scope.direction = "down";
+    //   } else {
+    //     $scope.direction = "up";
+    //   }
+
+    //   $scope.lastScrollTop = $scope.st;
+    //   $scope.$apply();
+    //   console.log($scope.direction);
+    // });
 
     $scope.$on('$destroy', function() {
+      $scope.showText = false;
       unRegisterListener();
     });
 

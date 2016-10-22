@@ -4,7 +4,7 @@ body {
 
 @font-face {
   font-family: 'gotham-bold';
-  src: url(/fonts/Gotham-Bold.wff) format('wff');
+  src: url(/fonts/Gotham-Bold.woff) format('woff');
 } 
 
 @font-face {
@@ -325,7 +325,7 @@ footer {
 }
 
 /*.page-animation.ng-enter { 
-  animation: slideInRight 1s both cubic-bezier(0.55, 0.055, 0.675, 0.19); 
+  animation: slideInRight 1s both cubic-bezier(0.005, 0.430, 0.370, 0.995); 
 }*/
 
 /*.caption > div {
@@ -335,13 +335,13 @@ footer {
 .fadeInUp {
   -webkit-animation-delay: 3s; /* Chrome, Safari, Opera */
   animation-delay: 3s;
-  animation: fadeInUp 1s both cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  animation: fadeInUp 1s both cubic-bezier(0.005, 0.430, 0.370, 0.995);
 }
 
 .line-animation-right-25 { 
   width: 25%;
-  -webkit-transition: width 1s cubic-bezier(0.55, 0.055, 0.675, 0.19); /* For Safari 3.1 to 6.0 */
-  transition: width 1s cubic-bezier(0.55, 0.055, 0.675, 0.19); 
+  -webkit-transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995); /* For Safari 3.1 to 6.0 */
+  transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995); 
 }
 
 /*.line-animation-right-25 { 
@@ -350,21 +350,21 @@ footer {
 
 .remove {
   width: 0px !important;
-  webkit-transition: width 1s cubic-bezier(0.55, 0.055, 0.675, 0.19); /* For Safari 3.1 to 6.0 */
-  transition: width 1s cubic-bezier(0.55, 0.055, 0.675, 0.19); 
+  webkit-transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995); /* For Safari 3.1 to 6.0 */
+  transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995); 
 }
 
 .line-animation-right-75 { 
   width: 75%;
-  -webkit-transition: width 1s cubic-bezier(0.55, 0.055, 0.675, 0.19); /* For Safari 3.1 to 6.0 */
-  transition: width 1s cubic-bezier(0.55, 0.055, 0.675, 0.19); 
+  -webkit-transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995); /* For Safari 3.1 to 6.0 */
+  transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995); 
 }
 
 .line-animation-right-60 { 
   margin-left: 40%;
   width: 60%;
-  -webkit-transition: width 1s cubic-bezier(0.55, 0.055, 0.675, 0.19); /* For Safari 3.1 to 6.0 */
-  transition: width 1s cubic-bezier(0.55, 0.055, 0.675, 0.19); 
+  -webkit-transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995); /* For Safari 3.1 to 6.0 */
+  transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995); 
 }
 
 @-webkit-keyframes fadeIn {
@@ -388,8 +388,8 @@ footer {
 }
 
 .fadeIn {
-  -webkit-animation: fadeIn 1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  animation: fadeIn 1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -webkit-animation: fadeIn 1s cubic-bezier(0.005, 0.430, 0.370, 0.995);
+  animation: fadeIn 1s cubic-bezier(0.005, 0.430, 0.370, 0.995);
 }
 
 /*.line-animation-right-75.ng-enter { 
@@ -398,67 +398,64 @@ footer {
 
 /*  animations    */
 
-@-webkit-keyframes fadeInUp {
+@-webkit-keyframes fadeUp {
   from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 10px, 0);
-    transform: translate3d(0, 10px, 0);
+    -webkit-transform: translate3d(0, 15px, 0);
+    transform: translate3d(0, 15px, 0);
   }
 
   to {
-    opacity: 1;
     -webkit-transform: none;
     transform: none;
   }
 }
 
-@keyframes fadeInUp {
+@keyframes fadeUp {
   from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 10px, 0);
-    transform: translate3d(0, 10px, 0);
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
   }
 
   to {
-    opacity: 1;
     -webkit-transform: none;
     transform: none;
   }
 }
 
 .fadeInUp {
-  -webkit-animation: fadeInUp 1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  animation: fadeInUp 1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -webkit-animation: fadeUp 2s cubic-bezier(0.005, 0.430, 0.370, 0.995), fadeIn 2s ease-in;
+  animation: fadeUp 2s cubic-bezier(0.005, 0.430, 0.370, 0.995), fadeIn 2s ease-in;
+}
+
+.fadeInUpContact {
+  -webkit-animation: fadeUp 1s cubic-bezier(0.005, 0.430, 0.370, 0.995), fadeIn 1s ease-in;
+  animation: fadeUp 1s cubic-bezier(0.005, 0.430, 0.370, 0.995), fadeIn 1s ease-in;
 }
 
 
-@-webkit-keyframes fadeOutDown {
+@-webkit-keyframes fadeDown {
   from {
-    opacity: 1;
   }
 
   to {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 10px, 0);
-    transform: translate3d(0, 10px, 0);
+    -webkit-transform: translate3d(0, 15px, 0);
+    transform: translate3d(0, 15px, 0);
   }
 }
 
-@keyframes fadeOutDown {
+@keyframes fadeDown {
   from {
-    opacity: 1;
   }
 
   to {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 10px, 0);
-    transform: translate3d(0, 10px, 0);
+    -webkit-transform: translate3d(0, 15px, 0);
+    transform: translate3d(0, 15px, 0);
   }
 }
 
 .fadeOutDown {
-  -webkit-animation: fadeOutDown 1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  animation: fadeOutDown 1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -webkit-animation: fadeOut 1s ease-in;
+  animation:  fadeOut 1s ease-in;
 }
 
 @-webkit-keyframes fadeOut {
@@ -482,7 +479,7 @@ footer {
 }
 
 .fadeOut {
-  -webkit-animation: fadeOut 1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  animation: fadeOut 1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -webkit-animation: fadeOut 1s cubic-bezier(0.005, 0.430, 0.370, 0.995);
+  animation: fadeOut 1s cubic-bezier(0.005, 0.430, 0.370, 0.995);
 }
 
