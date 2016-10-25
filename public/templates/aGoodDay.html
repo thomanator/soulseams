@@ -1,4 +1,16 @@
 <div class="color-white col-xs-12 content-about" ng-controller="aboutController">
+  <div class="overlay-pop-up" ng-show="getEmailId">
+    <div class="close-btn pull-right"><img src="/images/cross.png" width="30px"/></div>
+    <div class="overlay-content">
+      <center class="heading-16"> 
+        Drop your email address and we will get back to you
+        <br/><br/>
+        <input type="email" name="email" ng-model="email" class="custom-input form-control" placeholder="Email ID" style="width: 400px">
+        <div class="color-yellow" style="font-size: 12px" ng-show="error.length">{{error}} </div>
+        <button class="btn background-color-yellow color-white" ng-click="submit()"> Submit </button>
+      </center>
+    </div>
+  </div>
   <!-- <input type="checkbox" ng-model="showDiv" id="showDiv" />  -->
   <div class="caption inline" style="min-width: 250px;margin-bottom: 30px; min-height:70px; position: relative;"> 
     <div ng-class="{'fadeInUp': showText && !removeText, 'fadeOut': removeText}" ng-show="showText">
@@ -13,10 +25,11 @@
       <div> <i>'A Good Day' promises a proportion of the proceeds <br class="hidden-xs" /> from all over customer projects towards making clothes for children who need them. <br class="hidden-xs"/> Our aim is to give each child the experience of getting to pick up what they'd like to wear <br class="hidden-xs"/> and more importantly give them a good day. </i></div>
       <br/> <br/>
       <div class="heading-20"> <i> A Good Day Today, A <span class="color-yellow bold">Better Day Tomorrow</span> ! </i></div>
+      <button ng-click="showToast()" class="btn background-color-yellow color-white"> Enquiry </button>
     </div>
   </div>  
   <!-- <div class="col-xs-12" style="margin-top: 110px;"></div> -->
-  <div class="note" ng-class="{'fadeIn': showNote}">
+  <div class="note hover" ng-class="{'fadeIn': showNote}">
     <div ng-show="showNote">  
       BE A PART OF IT
     </div>

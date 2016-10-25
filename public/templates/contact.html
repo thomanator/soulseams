@@ -2,15 +2,19 @@
   <!-- <input type="checkbox" ng-model="showDiv" id="showDiv" />  -->
   <div class="col-xs-12 heading-30" ng-class="{'fadeInUpContact': showText && !removeText, 'fadeOutDown': removeText}" style="height: 150px">
     <div class="col-xs-12" ng-show="showText">
-      <div class="col-sm-7 col-xs-12">
-        <div> Drop you <span class="color-yellow bold">details</span></div>  
+      <div class="col-sm-6 col-xs-12">
+        <div> Drop you <span class="color-yellow bold">details</span></div> 
         <br/>
-        <input type="text" name="name" class="custom-input form-control" placeholder="Name">
-        <input type="number" name="number" class="custom-input form-control" placeholder="Contact Number">
-        <input type="email" name="email" class="custom-input form-control" placeholder="Email ID">
-        <input type="date" name="deliveryDate" class="custom-input form-control" placeholder="Expected delivery date">
-        <input type="number" name="count" class="custom-input form-control" placeholder="Expected number of units">
-        <button class="btn background-color-yellow color-white"> Submit </button>
+        <div class="heading-16"> Provide us your custom apparel requirement below.</div> 
+        <br/>
+        <input type="text" name="name" ng-model="contact.name" class="custom-input form-control" placeholder="Name">
+        <input type="text" name="number" ng-model="contact.number" class="custom-input form-control" placeholder="Contact Number" num-limit>
+        <input type="email" name="email" ng-model="contact.email" class="custom-input form-control" placeholder="Email ID">
+        <textarea class="custom-input form-control" ng-model="contact.description" placeholder="Describe your order"></textarea>
+        <!-- <input type="date" name="deliveryDate" class="custom-input form-control" placeholder="Expected delivery date">
+        <input type="number" name="count" class="custom-input form-control" placeholder="Expected number of units"> -->
+        <div class="color-yellow" style="font-size: 12px" ng-show="error.length">{{error}} </div>
+        <button class="btn background-color-yellow color-white" ng-click="submit()"> Submit </button>
       </div>
       <div class="col-sm-3 col-xs-12 pull-right hidden-xs">
         <div style="margin-bottom: 40px"> Contact <span class="color-yellow bold">Us</span></div> 

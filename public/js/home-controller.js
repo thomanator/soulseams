@@ -10,12 +10,18 @@
     $scope.showText = false;
     $scope.removeText = false;
     $rootScope.module = 'home';
+    $scope.next = next;
+
     $timeout(function() {
       $scope.showDiv = true; 
       $timeout(function() {
         $scope.showText = true; 
       }, 300);
     }, 5);
+
+    function next () {
+      $state.go('about');
+    }
 
     var unRegisterListener = $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
       if($scope.showDiv) {
