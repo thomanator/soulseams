@@ -63,7 +63,7 @@ body {
   background-color: rgb(16, 16, 16);
   position: fixed;
   z-index: 10000;
-  pointer-events: none;
+  /*pointer-events: none;*/
 }
 
 .close-btn {

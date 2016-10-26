@@ -56,9 +56,7 @@
         $http({
           url: '/enquiry',
           method: 'POST',
-          data: {
-
-          }
+          data: $scope.contact
         }).then(function () {
           console.log('success ', data);
           if(data.data.status == 'success') {

@@ -3,9 +3,9 @@
     .module('app')
     .controller('aboutController', aboutController);
 
-  aboutController.$inject = ['$scope', '$timeout', '$rootScope', '$state'];
+  aboutController.$inject = ['$scope', '$timeout', '$rootScope', '$state', '$http'];
 
-  function aboutController ($scope, $timeout, $rootScope, $state) {
+  function aboutController ($scope, $timeout, $rootScope, $state, $http) {
     $scope.showDiv = false;
     $scope.showText = false;
     $scope.removeText = false;
@@ -81,16 +81,19 @@
         }).then(function () {
           console.log('success ', data);
           if(data.data.status == 'success') {
-            $scope.showSuccessMessage = true;
+            $scope.getEmailId = false;
+            $scope.successMessage = true;
           }
           else {
             $scope.showErrorMessage = true;
-            $scope.errorMessage = data.data.message || 'Could not complete your request. Please try later';
+            $scope.getEmailId = false;
+            $scope.errorMessage = data.data.message || '. Please try later';
           }
         }, function (error) {
           console.log('error', error);
+          $scope.getEmailId = false;
           $scope.showErrorMessage = true;
-          $scope.errorMessage = error.data.statusText;
+          $scope.errorMessage = error.statusText;
         });
       }
     }

@@ -1,5 +1,14 @@
 <div class="color-white content-about" ng-controller="contactController">
   <!-- <input type="checkbox" ng-model="showDiv" id="showDiv" />  -->
+  <div class="overlay-pop-up" ng-show="showSuccessMessage || showErrorMessage">
+    <div class="parent col-xs-12" style="height: 100%">
+      <div class="close-btn pull-right" ng-click="showSuccessMessage = false; showErrorMessage = false"><img src="/images/cross.png" width="30px"/></div>
+      <div class="overlay-content child">
+        <center class="heading-16" ng-show="showSuccessMessage"> Your request has been send successfully. Our volunters will get in touch with you. </center>
+        <center class="heading-16" ng-show="showErrorMessage"> Sorry couldn't complete action due to {{errorMessage}} </center>
+      </div>
+    </div>
+  </div>
   <div class="col-xs-12 heading-30" ng-class="{'fadeInUpContact': showText && !removeText, 'fadeOutDown': removeText}" style="height: 150px">
     <div class="col-xs-12" ng-show="showText">
       <div class="col-sm-6 col-xs-12">
