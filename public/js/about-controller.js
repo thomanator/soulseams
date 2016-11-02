@@ -78,11 +78,12 @@
           data: {
             email: $scope.email
           }
-        }).then(function () {
+        }).then(function (data) {
           console.log('success ', data);
           if(data.data.status == 'success') {
             $scope.getEmailId = false;
             $scope.successMessage = true;
+            $scope.email = undefined;
           }
           else {
             $scope.showErrorMessage = true;

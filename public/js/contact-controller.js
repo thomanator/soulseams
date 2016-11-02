@@ -57,10 +57,11 @@
           url: '/enquiry',
           method: 'POST',
           data: $scope.contact
-        }).then(function () {
+        }).then(function (data) {
           console.log('success ', data);
           if(data.data.status == 'success') {
             $scope.showSuccessMessage = true;
+            $scope.contact = {};
           }
           else {
             $scope.showErrorMessage = true;

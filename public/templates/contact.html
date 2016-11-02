@@ -1,4 +1,4 @@
-<div class="color-white content-about" ng-controller="contactController">
+<div class="color-white content-about">
   <!-- <input type="checkbox" ng-model="showDiv" id="showDiv" />  -->
   <div class="overlay-pop-up" ng-show="showSuccessMessage || showErrorMessage">
     <div class="parent col-xs-12" style="height: 100%">
@@ -25,7 +25,7 @@
         <div class="color-yellow" style="font-size: 12px" ng-show="error.length">{{error}} </div>
         <button class="btn background-color-yellow color-white" ng-click="submit()"> Submit </button>
       </div>
-      <div class="col-sm-3 col-xs-12 pull-right hidden-xs">
+      <div class="col-lg-4 col-sm-3 col-xs-12 pull-right hidden-xs">
         <div style="margin-bottom: 40px"> Contact <span class="color-yellow bold">Us</span></div> 
         <div class="heading-20"> Write to us at</div>
         <div class="color-yellow heading-24"> info@soulseams.com</div>
@@ -35,4 +35,7 @@
       </div>
     </div>
   </div>
+</div>
+<div class="col-xs-12 visible-xs" style="position: absolute; bottom: 55px">
+  <div  ng-click="next()" id="scrollIndicator"><i></i></div>
 </div>

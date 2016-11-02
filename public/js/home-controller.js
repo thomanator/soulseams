@@ -20,6 +20,7 @@
     }, 5);
 
     function next () {
+      console.log('about');
       $state.go('about');
     }
 

@@ -1,4 +1,4 @@
-<div class="color-white col-xs-12 content-about" ng-controller="aboutController">
+<div class="color-white col-xs-12 content-about" style="position: relative; height: 100%">
   <div class="overlay-pop-up" ng-show="getEmailId || successMessage || showErrorMessage">
     <div class="parent col-xs-12" style="height: 100%">
       <div class="close-btn pull-right" ng-click="getEmailId = false; successMessage = false; showErrorMessage = false"><img src="/images/cross.png" width="30px"/></div>
@@ -32,12 +32,17 @@
     </div>
   </div>  
   <!-- <div class="col-xs-12" style="margin-top: 110px;"></div> -->
-  <div class="note hover" ng-class="{'fadeIn': showNote}">
-    <div ng-show="showNote" ng-click="showToast()" style="cursor: pointer;" title="Click to be a part of this program">  
-      BE A PART OF IT
+  <div class="col-xs-12 no-padding" style="position: absolute;z-index: 1000; bottom: 20%; right: 0px">
+    <div class="note hover" ng-class="{'fadeIn': showNote}">
+      <div ng-show="showNote" ng-click="showToast()" style="cursor: pointer;" title="Click to be a part of this program">  
+        BE A PART OF IT
+      </div>
+    </div>
+    <div class="col-xs-12 no-padding" style="height: 2px;">
+      <div class="line background-color-white line-left" style="margin-left: 25%" ng-class="{'remove': !showDiv, 'line-animation-right-75': showLine, 'line-right': !showDiv}"></div>
     </div>
   </div>
-  <div class="col-xs-12 no-padding" style="height: 2px;">
-    <div class="line background-color-white line-left" style="margin-left: 25%" ng-class="{'remove': !showDiv, 'line-animation-right-75': showLine, 'line-right': !showDiv}"></div>
-  </div>
+</div>
+<div class="col-xs-12 visible-xs" style="position: absolute; bottom: 55px">
+  <div  ng-click="next()" id="scrollIndicator"><i></i></div>
 </div>
