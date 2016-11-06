@@ -48,7 +48,7 @@
     }
 
     function prev () {
-      $state.go('contact');
+      $state.go('about');
     }
 
     function submit () {

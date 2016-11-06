@@ -37,7 +37,7 @@
     }
 
     function prev () {
-      $state.go('about');
+      $state.go('home');
     }
 
     var unRegisterListener = $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {

@@ -1,4 +1,4 @@
-<div class="col-xs-12 color-white">
+<div class="col-xs-12 no-padding color-white">
   <!-- <input type="checkbox" ng-model="showDiv" id="showDiv" />  -->
   <div class="overlay-pop-up" ng-show="showSuccessMessage || showErrorMessage">
     <div class="parent col-xs-12" style="height: 100%">
@@ -8,6 +8,9 @@
         <center class="heading-16" ng-show="showErrorMessage"> Sorry couldn't complete action due to {{errorMessage}} </center>
       </div>
     </div>
+  </div>
+  <div class="col-xs-12 visible-xs" style="position: relative; top: 25px">
+    <div  ng-click="prev()"  class="up" id="scrollIndicator-up" style="top: 0px"><i></i></div>
   </div>
   <div class="col-xs-12 heading-30 content-about" ng-class="{'fadeInUpContact': showText && !removeText, 'fadeOutDown': removeText}">
     <div class="col-xs-12 no-padding" ng-show="showText">
@@ -25,7 +28,7 @@
         <div class="color-yellow" style="font-size: 12px" ng-show="error.length">{{error}} </div>
         <button class="btn background-color-yellow color-white" ng-click="submit()"> SUBMIT </button>
       </div>
-      <div class="col-lg-4 col-sm-6 col-xs-12 pull-left hidden-xs" style="padding-left: 10%">
+      <div class="col-lg-4 col-sm-6 col-xs-12 pull-left contact-xs" style="padding-left: 10%">
         <div style="margin-bottom: 40px"> Contact <span class="color-yellow bold">Us</span></div> 
         <div class="heading-20"> Write to us at</div>
         <div class="color-yellow heading-24"> info@soulseams.com</div>
@@ -36,6 +39,6 @@
     </div>
   </div>
 </div>
-<div class="col-xs-12 visible-xs" ng-show="showText" style="position: relative; padding-bottom: 100px">
+<!-- <div class="col-xs-12 visible-xs" ng-show="showText" style="position: relative; padding-bottom: 100px">
   <div  ng-click="next()" id="scrollIndicator" style="top: 0px"><i></i></div>
-</div>
+</div> -->
