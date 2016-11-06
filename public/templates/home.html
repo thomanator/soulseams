@@ -4,7 +4,7 @@
     <div class="line background-color-yellow" style="float: right" ng-class="{'remove': !showDiv, 'line-animation-right-25' : showDiv}"></div>  
   </div>
   <div class="col-xs-12 caption parent" ng-class="{'fadeInUp': showText && !removeText, 'fadeOutDown': removeText}" style="height: 150px">
-    <i ng-show="showText" class="fa fa-quote-left icon" style="color: #171717;"></i>  
+    <i ng-show="showText" class="fa fa-quote-left icon child" style="color: #171717;"></i>  
     <div class="col-xs-12 child" ng-show="showText">
       <div> We make clothes </div>
       <div style="float: right;">that <span class="color-yellow bold caption-bg">matter</span></div>
@@ -14,6 +14,6 @@
     <div class="line background-color-white" style="float: left;" ng-class="{'remove': !showDiv, 'line-animation-right-75': showDiv}"></div>
   </div>
 </div>
-<div class="col-xs-12 visible-xs" style="position: absolute; bottom: 70px">
+<div class="col-xs-12" ng-show="showText" style="position: absolute; bottom: 55px">
   <div  ng-click="next()" id="scrollIndicator"><i></i></div>
 </div>

@@ -8,7 +8,7 @@
           <br/><br/>
           <input type="email" name="email" ng-model="email" class="custom-input form-control" placeholder="Email ID" style="width: 400px">
           <div class="color-yellow" style="font-size: 12px" ng-show="error.length">{{error}} </div>
-          <button class="btn background-color-yellow color-white" ng-click="submit()"> Submit </button>
+          <button class="btn background-color-yellow color-white" ng-click="submit()"> SUBMIT </button>
         </center>
         <center class="heading-16" ng-show="successMessage"> Your request has been send successfully. Our volunters will get in touch with you. </center>
         <center class="heading-16" ng-show="showErrorMessage"> Sorry couldn't complete action due to {{errorMessage}} </center>
@@ -26,7 +26,8 @@
   </div>
   <div class="col-xs-12 no-padding" ng-class="{'fadeInUp': showText && !removeText, 'fadeOut': removeText}">
     <div class="col-xs-12 no-padding content-small" ng-show="showText">
-      <div> <i>'A Good Day' promises a proportion of the proceeds <br class="hidden-xs" /> from all over customer projects towards making clothes for children who need them. <br class="hidden-xs"/> Our aim is to give each child the experience of getting to pick up what they'd like to wear <br class="hidden-xs"/> and more importantly give them a good day. </i></div>
+      <div> <i>'A Good Day' promises a proportion of the proceeds <br class="hidden-xs" /> from all over customer projects towards making clothes for children who need them. <br class="hidden-xs"/> Our aim is to give each child the experience of getting to pick up what they'd like to wear <br class="hidden-xs"/> and more importantly give them a good day. </i>
+      </div>
       <br/> <br/>
       <div class="heading-20"> <i> A Good Day Today, A <span class="color-yellow bold">Better Day Tomorrow</span> ! </i></div>
     </div>
@@ -39,10 +40,10 @@
       </div>
     </div>
     <div class="col-xs-12 no-padding" style="height: 2px;">
-      <div class="line background-color-white line-left" style="margin-left: 25%" ng-class="{'remove': !showDiv, 'line-animation-right-75': showLine, 'line-right': !showDiv}"></div>
+      <div class="line background-color-white line-left" style="margin-left: 50%" ng-class="{'remove': !showDiv, 'line-animation-right-50': showLine, 'line-right': !showDiv}"></div>
     </div>
   </div>
 </div>
-<div class="col-xs-12 visible-xs" style="position: absolute; bottom: 55px">
+<div class="col-xs-12" ng-show="showNote" style="position: absolute; bottom: 55px">
   <div  ng-click="next()" id="scrollIndicator"><i></i></div>
 </div>

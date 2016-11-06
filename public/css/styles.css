@@ -68,7 +68,7 @@ body {
 
 .close-btn {
   font-size: 20px;
-  padding: 30px;
+  padding: 30px 10px;
   cursor: pointer;
   display: inline-block;
 }
@@ -164,6 +164,8 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+  background-color: #101010;
+  z-index: 100;
 }
 
 .btn-next {
@@ -197,7 +199,7 @@ footer {
 }
 
 .content-home > div.caption > div{
-  max-width: 650px;
+  max-width: 600px;
   /*padding-left: 15%;*/
 }
 
@@ -285,8 +287,10 @@ footer {
   font-size: 120px !important;
   position: absolute;
   z-index: -1;
-  left: 25px;
-  top: -15px;
+  /*left: 25px;
+  top: -15px;*/
+  left: calc(50% - 300px);
+  top: calc(50% - 30px);
 }
 
 @media screen and (min-width: 768px) {
@@ -296,6 +300,10 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  .custom-li {
+    padding-bottom: 10px;
+    float: right;
+  }
   .navbar-collapse {
     width: 100%;
     opacity: 1;
@@ -333,7 +341,7 @@ footer {
   }
 
   .line-top {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 
   .line-btm {
@@ -349,6 +357,8 @@ footer {
   }
   .icon {
     font-size: 60px !important;
+    left: calc(50% - 200px);
+    top: calc(50% - 20px);
   }
 
   .content-home {
@@ -397,6 +407,7 @@ footer {
   cursor: pointer;
   /*opacity: 0;*/
   -webkit-transition: opacity 1.3s .5s;
+  /*top: 0px;*/
 }
 
 #scrollIndicator i {
@@ -489,6 +500,12 @@ footer {
 
 .line-animation-right-75 { 
   width: 75%;
+  -webkit-transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995); /* For Safari 3.1 to 6.0 */
+  transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995); 
+}
+
+.line-animation-right-50 { 
+  width: 50%;
   -webkit-transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995); /* For Safari 3.1 to 6.0 */
   transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995); 
 }

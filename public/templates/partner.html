@@ -1,8 +1,8 @@
-<div class="color-white content-about" ng-controller="contactController">
+<div class="color-white" ng-controller="contactController">
   <!-- <input type="checkbox" ng-model="showDiv" id="showDiv" />  -->
-  <div class="col-xs-12 heading-30" ng-class="{'fadeInUpContact': showText && !removeText, 'fadeOutDown': removeText}" style="height: 150px">
-    <div class="col-xs-12" ng-show="showText">
-      <div class="col-sm-7 col-xs-12 hidden-xs">
+  <div class="col-xs-12 heading-30 content-about" ng-class="{'fadeInUpContact': showText && !removeText, 'fadeOutDown': removeText}" style="height: 150px">
+    <div class="col-xs-12 no-padding" ng-show="showText">
+      <div class="col-sm-7 col-xs-12 no-padding hidden-xs">
         <div> Drop you <span class="color-yellow bold">details</span></div>  
         <br/>
         <input type="text" name="name" class="custom-input form-control" placeholder="Name">
@@ -12,7 +12,7 @@
         <input type="number" name="count" class="custom-input form-control" placeholder="Expected number of units">
         <button class="btn background-color-yellow color-white"> Submit </button>
       </div>
-      <div class="col-sm-3 col-xs-12 pull-right">
+      <div class="col-sm-3 no-padding col-xs-12 pull-right">
         <div style="margin-bottom: 40px"> Contact <span class="color-yellow bold">Us</span></div> 
         <div class="heading-20"> Write to us at</div>
         <div class="color-yellow heading-24"> info@soulseams.com</div>
