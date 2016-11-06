@@ -16,7 +16,7 @@
     </div>
   </div>
   <!-- <input type="checkbox" ng-model="showDiv" id="showDiv" />  -->
-  <div class="caption inline" style="min-width: 250px;margin-bottom: 30px; min-height:70px; position: relative;"> 
+  <div class="caption inline caption-good-day"> 
     <div ng-class="{'fadeInUp': showText && !removeText, 'fadeOut': removeText}" ng-show="showText">
       A <span class="color-yellow medium"> Good </span> Day
     </div>
@@ -33,7 +33,7 @@
     </div>
   </div>  
   <!-- <div class="col-xs-12" style="margin-top: 110px;"></div> -->
-  <div class="col-xs-12 no-padding" style="position: absolute;z-index: 1000; bottom: 20%; right: 0px">
+  <div class="col-xs-12 no-padding be-a-part">
     <div class="note hover" ng-class="{'fadeIn': showNote}">
       <div ng-show="showNote" ng-click="showToast()" style="cursor: pointer;" title="Click to be a part of this program">  
         BE A PART OF IT
@@ -43,7 +43,10 @@
       <div class="line background-color-white line-left" style="margin-left: 50%" ng-class="{'remove': !showDiv, 'line-animation-right-50': showLine, 'line-right': !showDiv}"></div>
     </div>
   </div>
+  <div class="col-xs-12 visible-xs" ng-show="showNote" style="position: relative; padding-bottom: 100px">
+    <div  ng-click="next()" id="scrollIndicator" style="top: 0px"><i></i></div>
+  </div>
 </div>
-<div class="col-xs-12" ng-show="showNote" style="position: absolute; bottom: 55px">
-  <div  ng-click="next()" id="scrollIndicator"><i></i></div>
+<div class="col-xs-12 hidden-xs scrollIndicator-btn" ng-show="showNote" style="position: relative; padding-bottom: 100px">
+  <div  ng-click="next()" id="scrollIndicator" style="top: 0px"><i></i></div>
 </div>

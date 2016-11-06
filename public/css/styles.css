@@ -633,3 +633,39 @@ footer {
   animation: fadeOut 1s cubic-bezier(0.005, 0.430, 0.370, 0.995);
 }
 
+.caption-good-day {
+  min-width: 250px;
+  margin-bottom: 30px; 
+  min-height:70px; 
+  position: relative;
+}
+
+.be-a-part {
+  position: absolute;
+  z-index: 10; 
+  right: 0px; 
+  /*bottom: 30px;*/
+  bottom: 20%;
+}
+
+.scrollIndicator-btn {
+  position: absolute;
+  bottom: 120px;
+}
+
+@media screen and (max-width: 768px) {
+  .caption-good-day {
+    min-width: 150px;
+  }
+  .be-a-part {
+    position: relative;
+    z-index: 10; 
+    right: 0px; 
+    bottom: 30px;
+  }
+  .scrollIndicator-btn {
+    position: relative; 
+    padding-bottom: 100px
+  }
+}
+
