@@ -37,7 +37,7 @@ function enquiry() {
 		    service: 'gmail',
 		    auth : {
 		        user : "soulseams@gmail.com",
-		        pass : "Soulseams786"
+		        pass : ""
 		    }
 		}))		
 
@@ -68,7 +68,7 @@ function enquiry() {
 		    service: 'gmail',
 		    auth : {
 		        user : "soulseams@gmail.com",
-		        pass : "Soulseams786"
+		        pass : ""
 		    }
 		}))		
 
