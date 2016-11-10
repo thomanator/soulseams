@@ -1,36 +1,36 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family:'gotham-book', 'Open Sans', sans-serif;
 }
 
 @font-face {
   font-family: 'gotham-bold';
-  src: url(/fonts/Gotham-Bold.woff) format('woff');
-} 
+  src: url(../fonts/Gotham-Bold.woff) format('woff');
+}
 
 @font-face {
   font-family: 'roboto';
-  src: url(/font/Roboto-Thin.tff) format('tff'), url(/font/Roboto-Thin.woff) format('woff'), url(/font/Roboto-Thin.woff2) format('woff2');
+  src: url(../fonts/Roboto-Thin.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'gotham-medium';
-  src: url(fonts/Gotham-Medium.otf) format('otf');
-} 
+  src: url(../fonts/Gotham-Medium.otf) format('truetype');
+}
 
 @font-face {
   font-family: 'gotham-book-italic';
-  src: url(fonts/Gotham-BookItalic.otf) format('otf');
-} 
+  src: url(../fonts/Gotham-BookItalic.otf) format('truetype');
+}
 
 @font-face {
   font-family: 'gotham-book';
-  src: url(fonts/Gotham-Book.otf) format('otf');
+  src: url(../fonts/Gotham-Book.otf) format('truetype');
 }
 
 @font-face {
   font-family: 'gotham-black';
-  src: url(fonts/Gotham-Black.otf) format('otf');
-} 
+  src: url(../fonts/Gotham-Black.otf) format('truetype');
+}
 
 /*.gotham-bold {
   font-family: 'gotham-bold' !important;
@@ -214,7 +214,7 @@ footer {
 .content-about {
   width: 90%;
   padding-top: 80px;
-  padding-left: 10%; 
+  padding-left: 10%;
 }
 
 .content-about > div > .content-small {
@@ -249,7 +249,7 @@ footer {
   z-index: 100;
   /*background-color: transparent;*/
   background-color: rgba(241,241,241, 0.04);
-  border: 0px; 
+  border: 0px;
 }
 
 .caption {
@@ -370,7 +370,7 @@ footer {
   }
 
   .custom-li{
-    width: 50% !important; 
+    width: 50% !important;
     float: left;
   }
 }
@@ -516,8 +516,8 @@ footer {
   }
 }
 
-/*.page-animation.ng-enter { 
-  animation: slideInRight 1s both cubic-bezier(0.005, 0.430, 0.370, 0.995); 
+/*.page-animation.ng-enter {
+  animation: slideInRight 1s both cubic-bezier(0.005, 0.430, 0.370, 0.995);
 }*/
 
 /*.caption > div {
@@ -530,39 +530,39 @@ footer {
   animation: fadeInUp 1s both cubic-bezier(0.005, 0.430, 0.370, 0.995);
 }
 
-.line-animation-right-25 { 
+.line-animation-right-25 {
   width: 25%;
   -webkit-transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995); /* For Safari 3.1 to 6.0 */
-  transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995); 
+  transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995);
 }
 
-/*.line-animation-right-25 { 
+/*.line-animation-right-25 {
   width: 0%;
 }*/
 
 .remove {
   width: 0px !important;
   webkit-transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995); /* For Safari 3.1 to 6.0 */
-  transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995); 
+  transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995);
 }
 
-.line-animation-right-75 { 
+.line-animation-right-75 {
   width: 75%;
   -webkit-transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995); /* For Safari 3.1 to 6.0 */
-  transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995); 
+  transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995);
 }
 
-.line-animation-right-50 { 
+.line-animation-right-50 {
   width: 50%;
   -webkit-transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995); /* For Safari 3.1 to 6.0 */
-  transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995); 
+  transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995);
 }
 
-.line-animation-right-60 { 
+.line-animation-right-60 {
   margin-left: 40%;
   width: 60%;
   -webkit-transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995); /* For Safari 3.1 to 6.0 */
-  transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995); 
+  transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995);
 }
 
 @-webkit-keyframes fadeIn {
@@ -590,7 +590,7 @@ footer {
   animation: fadeIn 1s cubic-bezier(0.005, 0.430, 0.370, 0.995);
 }
 
-/*.line-animation-right-75.ng-enter { 
+/*.line-animation-right-75.ng-enter {
   width: 0%;
 }*/
 
@@ -683,15 +683,15 @@ footer {
 
 .caption-good-day {
   min-width: 250px;
-  margin-bottom: 30px; 
-  min-height:70px; 
+  margin-bottom: 30px;
+  min-height:70px;
   position: relative;
 }
 
 .be-a-part {
   position: absolute;
-  z-index: 10; 
-  right: 0px; 
+  z-index: 10;
+  right: 0px;
   /*bottom: 30px;*/
   bottom: 20%;
 }
@@ -707,12 +707,12 @@ footer {
   }
   .be-a-part {
     position: relative;
-    z-index: 10; 
-    right: 0px; 
+    z-index: 10;
+    right: 0px;
     bottom: 30px;
   }
   .scrollIndicator-btn {
-    position: relative; 
+    position: relative;
     padding-bottom: 100px
   }
 
@@ -722,4 +722,3 @@ footer {
     padding-bottom: 100px;
   }
 }
-
