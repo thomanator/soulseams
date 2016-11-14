@@ -1,7 +1,7 @@
 <div class="color-white child content-home">
   <!-- <input type="checkbox" ng-model="showDiv" id="showDiv" />  -->
   <div class="col-xs-12 line-top" style="height:2px;">
-    <div class="line background-color-yellow" style="float: right" ng-class="{'remove': !showDiv, 'line-animation-right-25' : showDiv}"></div>  
+    <div class="line background-color-yellow" ng-class="{'remove': !showDiv, 'line-animation-right-25' : showDiv, 'align-left' : !showDiv}"></div>  
   </div>
   <div class="col-xs-12 caption parent" ng-class="{'fadeInUp': showText && !removeText, 'fadeOutDown': removeText}" style="height: 150px">
     <i ng-show="showText" class="fa fa-quote-left icon child" style="color: #171717;"></i>  
@@ -11,7 +11,7 @@
     </div>
   </div>
   <div class="col-xs-12 line-btm" style="height: 2px;">
-    <div class="line background-color-white" style="float: left;" ng-class="{'remove': !showDiv, 'line-animation-right-75': showDiv}"></div>
+    <div class="line background-color-white" ng-class="{'remove': !showDiv, 'line-animation-right-75': showDiv, 'align-right': !showDiv}"></div>
   </div>
 </div>
 <div class="col-xs-12 visible-xs" ng-show="showText" style="position: absolute; bottom: 55px">

@@ -32,7 +32,7 @@ body {
   src: url(../fonts/Gotham-Black.otf) format('truetype');
 }
 
-/*.gotham-bold {
+.gotham-bold {
   font-family: 'gotham-bold' !important;
 }
 
@@ -50,7 +50,7 @@ body {
 
 .gotham-book-italic {
   font-family: 'gotham-book-italic' !important;
-}*/
+}
 
 .overlay-pop-up {
   width: 100%;
@@ -95,6 +95,18 @@ body {
 
 .line-right {
   float: right;
+}
+
+.align-right {
+  float: right;
+  margin-right: 25%;
+  width: 0;
+}
+
+.align-left {
+  float: left;
+  margin-left: 75%;
+  width: 0; 
 }
 
 .child {
@@ -262,8 +274,8 @@ footer {
 }
 
 .note {
-  width: 110px;
-  height: 25px;
+  width: 121px;
+  height: 20px;
   margin-top: 140px;
   /*opacity: 0;*/
   float: right;
@@ -299,14 +311,28 @@ footer {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .content-small  {
+    font-size: 18px !important;
+  }
+
+  .heading-20 {
+    font-size: 20px !important;
+  }
+
+}
+
 @media screen and (max-width: 768px) {
+  .navbar-header {
+    margin-top: -10px;
+  }
   .custom-li {
     padding-bottom: 10px;
     float: right;
   }
   .navbar-collapse {
     width: 100%;
-    opacity: 1;
+    opacity: .95;
     bottom: 0px;
     right: 0px;
     left: 0px;
@@ -531,6 +557,7 @@ footer {
 }
 
 .line-animation-right-25 {
+  float: right;
   width: 25%;
   -webkit-transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995); /* For Safari 3.1 to 6.0 */
   transition: width 1s cubic-bezier(0.005, 0.430, 0.370, 0.995);
@@ -683,7 +710,7 @@ footer {
 
 .caption-good-day {
   min-width: 250px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   min-height:70px;
   position: relative;
 }
