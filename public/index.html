@@ -73,19 +73,19 @@
         <ul class="nav navbar-nav">
           <li class="pull-right" style="width: 40px; height: 10px"></li>
           <li class="pull-right hidden-xs">
-            <a ui-sref="contact" class="padding-top-lg color-white">PARTNER WITH US</a>
+            <a ui-sref="contact" class="padding-top-lg" ng-class="{'color-white': module == 'partner'}">PARTNER WITH US</a>
           </li>
           <li class="pull-right hidden-xs">
-            <a ui-sref="about" class="padding-top-lg color-white">A GOOD DAY</a>
+            <a ui-sref="about" class="padding-top-lg" ng-class="{'color-white': module == 'about'}">A GOOD DAY</a>
           </li>
           <li class="visible-xs" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
             <a ui-sref="home" class="padding-top-lg color-white">SOULSEAMS</a>
           </li>
           <li class="visible-xs" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <a ui-sref="about" class="padding-top-lg color-white">A GOOD DAY</a>
+            <a ui-sref="about" class="padding-top-lg" ng-class="{'color-white': module == 'about'}">A GOOD DAY</a>
           </li>
           <li class="visible-xs" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <a ui-sref="contact" class="padding-top-lg color-white">PARTNER WITH US</a>
+            <a ui-sref="contact" class="padding-top-lg" ng-class="{'color-white': module == 'partner'}">PARTNER WITH US</a>
           </li>
           <!-- <li class="visible-xs" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
             <a ui-sref="partner" class="padding-top-lg" ng-class="{'color-white': module == 'partner'}">CONTACT US</a>
@@ -104,10 +104,10 @@
   <footer>
     <ul class="nav navbar-nav custom-nav color-white pull-right" style="margin: 0px">
       <li class="custom-li" style="text-align: right;">
-        <a href="https://facebook.com" target="_blank">FACEBOOK</a>
+        <a class="color-white" href="https://facebook.com" target="_blank">FACEBOOK</a>
       </li>
       <li class="custom-li">
-        <a href="https://twitter.com/login" target="_blank">TWITTER</a>
+        <a class="color-white" href="https://twitter.com/login" target="_blank">TWITTER</a>
       </li>
       <li class="hidden-xs" style="width: 40px; height: 10px"></li>
     </ul>

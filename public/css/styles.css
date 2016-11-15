@@ -118,6 +118,7 @@ body {
 
 .navbar-toggle {
   margin-top: 33px;
+  margin-bottom: 20px;
   border: 0px;
 }
 
@@ -275,7 +276,7 @@ footer {
 
 .note {
   width: 121px;
-  height: 20px;
+  height: 25px;
   margin-top: 140px;
   /*opacity: 0;*/
   float: right;
@@ -710,7 +711,7 @@ footer {
 
 .caption-good-day {
   min-width: 250px;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
   min-height:70px;
   position: relative;
 }
