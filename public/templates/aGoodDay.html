@@ -24,7 +24,7 @@
     <div ng-class="{'fadeInUp': showText && !removeText, 'fadeOut': removeText}" ng-show="showText">
       A <span class="color-yellow medium"> Good </span> Day
     </div>
-    <div class="col-xs-12 no-padding" style="height:2px; position: absolute;bottom: 10px;">
+    <div class="col-xs-12 no-padding good-day-orange-line" style="height:2px; position: absolute;">
       <div class="line background-color-yellow line-left" ng-class="{'remove': !showDiv, 'line-animation-right-60': showDiv, 'line-right': !showDiv}"></div>  
     </div>
   </div>
@@ -38,8 +38,8 @@
   </div>  
   <!-- <div class="col-xs-12" style="margin-top: 110px;"></div> -->
   <div class="col-xs-12 no-padding be-a-part">
-    <div class="note hover" ng-class="{'fadeIn': showNote}">
-      <div ng-show="showNote" ng-click="showToast()" style="cursor: pointer;" title="Click to be a part of this program">  
+    <div class="note hover gotham-bold" ng-class="{'fadeIn': showNote}">
+      <div ng-show="showNote" ng-click="showToast()" style="cursor: pointer;font-weight: 500" title="Click to be a part of this program">  
         BE A PART OF IT
       </div>
     </div>

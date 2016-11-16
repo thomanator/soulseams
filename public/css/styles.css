@@ -97,6 +97,10 @@ body {
   float: right;
 }
 
+.good-day-orange-line {
+  bottom: 10px;
+}
+
 .align-right {
   float: right;
   margin-right: 25%;
@@ -259,6 +263,7 @@ footer {
   margin-bottom: 10px;
   color: #dadada;
   font-size: 16px;
+  font-family: 'gotham-book-italic' !important;
   z-index: 100;
   /*background-color: transparent;*/
   background-color: rgba(241,241,241, 0.04);
@@ -302,11 +307,19 @@ footer {
   z-index: -1;
   /*left: 25px;
   top: -15px;*/
-  left: calc(50% - 300px);
-  top: calc(50% - 30px);
+  left: calc(50% - 264px);
+  top: calc(50% - 56px);
+}
+
+.icon > img {
+  width: 110px;
 }
 
 @media screen and (min-width: 768px) {
+  .good-day-orange-line {
+    bottom: -5px !important;
+  }
+
   .padding-top-lg {
     padding-top: 40px !important;
   }
@@ -324,6 +337,10 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  .icon > img {
+    width: 70px;
+  }
+
   .navbar-header {
     margin-top: -10px;
   }
@@ -384,8 +401,8 @@ footer {
   }
   .icon {
     font-size: 60px !important;
-    left: calc(50% - 200px);
-    top: calc(50% - 20px);
+    left: calc(50% - 183px);
+    top: calc(50% - 36px);
   }
 
   .content-home {
@@ -710,7 +727,7 @@ footer {
 }
 
 .caption-good-day {
-  min-width: 250px;
+  min-width: 273px;
   margin-bottom: 35px;
   min-height:70px;
   position: relative;
@@ -731,7 +748,7 @@ footer {
 
 @media screen and (max-width: 768px) {
   .caption-good-day {
-    min-width: 150px;
+    min-width: 182px;
   }
   .be-a-part {
     position: relative;
@@ -746,7 +763,7 @@ footer {
 
   .contact-xs {
     padding-left: 0px !important;
-    padding-top: 10% !important;
+    padding-top: 80px !important;
     padding-bottom: 100px;
   }
 }
