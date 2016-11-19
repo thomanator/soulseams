@@ -13,7 +13,7 @@
       if(!appData.canChangeState){
         return;
       }
-      if(e.wheelDelta < 0) {
+      if(e.wheelDelta > 0) {
         appData.activeState-=1;
         if(appData.activeState < 0){
           appData.activeState = 0;
@@ -21,7 +21,6 @@
         }
       }else{
         //up
-        console.log('up');
         appData.activeState+=1;
         if(appData.activeState > 2){
           appData.activeState = 2;
