@@ -3,9 +3,9 @@
     .module('app')
     .controller('contactController', contactController);
 
-  contactController.$inject = ['$scope', '$timeout', '$rootScope', '$state', '$http'];
+  contactController.$inject = ['$scope', '$timeout', '$rootScope', '$state', '$http','$element','ScrollerService','appData','$element'];
 
-  function contactController ($scope, $timeout, $rootScope, $state, $http) {
+  function contactController ($scope, $timeout, $rootScope, $state, $http, $element, ScrollerService, appData, $element) {
     $scope.navigate = false;
     $scope.showDiv = false;
     $scope.showText = false;
@@ -18,9 +18,9 @@
     $scope.submit = submit;
 
     $timeout(function() {
-      $scope.showText = true; 
+      $scope.showText = true;
       // $timeout(function() {
-      //   $scope.showText = true; 
+      //   $scope.showText = true;
       // }, 1150);
     }, 1);
 
@@ -41,6 +41,7 @@
 
     $scope.$on('$destroy', function() {
       unRegisterListener();
+      ScrollerService._unbindScroll($element);
     });
 
     function next () {
@@ -80,6 +81,8 @@
       return re.test(email);
     }
 
+      ScrollerService._bindScroll($element);
+
     function valid () {
       var valid = true;
       $scope.error = '';
@@ -108,7 +111,7 @@
         $scope.error += 'Email ID';
         valid = false;
       }
-      
+
       if($scope.error.length) {
         $scope.error += ' is/are required.';
         valid = false;
@@ -126,6 +129,9 @@
       console.log($scope.error, valid);
       return valid;
     }
+
+    appData.activeState = 2;
+    appData.canChangeState = true;
 
   }
 })()

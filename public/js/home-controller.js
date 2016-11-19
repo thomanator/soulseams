@@ -3,9 +3,10 @@
     .module('app')
     .controller('homeController', homeController);
 
-  homeController.$inject = ['$scope', '$timeout', '$rootScope', '$state', '$window'];
 
-  function homeController ($scope, $timeout, $rootScope, $state, $window) {
+  homeController.$inject = ['$scope', '$timeout', '$rootScope', '$state', '$window','ScrollerService','$element','appData'];
+
+  function homeController ($scope, $timeout, $rootScope, $state, $window,ScrollerService, $element, appData) {
     $scope.showDiv = false;
     $scope.showText = false;
     $scope.removeText = false;
@@ -13,9 +14,9 @@
     $scope.next = next;
 
     $timeout(function() {
-      $scope.showDiv = true; 
+      $scope.showDiv = true;
       $timeout(function() {
-        $scope.showText = true; 
+        $scope.showText = true;
       }, 300);
     }, 5);
 
@@ -53,10 +54,16 @@
     //   console.log($scope.direction);
     // });
 
+    ScrollerService._bindScroll($element);
+
     $scope.$on('$destroy', function() {
       $scope.showText = false;
       unRegisterListener();
+      ScrollerService._unbindScroll($element);
     });
+
+    appData.activeState = 0;
+    appData.canChangeState = true;
 
   }
 })()

@@ -3,9 +3,9 @@
     .module('app')
     .controller('aboutController', aboutController);
 
-  aboutController.$inject = ['$scope', '$timeout', '$rootScope', '$state', '$http'];
+  aboutController.$inject = ['$scope', '$timeout', '$rootScope', '$state', '$http','$element','ScrollerService','appData','$element'];
 
-  function aboutController ($scope, $timeout, $rootScope, $state, $http) {
+  function aboutController ($scope, $timeout, $rootScope, $state, $http, $element, ScrollerService, appData, $element) {
     $scope.showDiv = false;
     $scope.showText = false;
     $scope.removeText = false;
@@ -19,10 +19,12 @@
     $scope.next = next;
     $scope.prev = prev;
 
+      ScrollerService._bindScroll($element);
+
     $timeout(function() {
-      $scope.showDiv = true; 
+      $scope.showDiv = true;
       $timeout(function() {
-        $scope.showText = true; 
+        $scope.showText = true;
         $timeout(function() {
           $scope.showLine = true;
           $timeout(function() {
@@ -58,6 +60,8 @@
 
     $scope.$on('$destroy', function() {
       unRegisterListener();
+
+      ScrollerService._unbindScroll($element);
     });
 
     function validateEmail(email) {
@@ -98,6 +102,9 @@
         });
       }
     }
+
+    appData.activeState = 1;
+    appData.canChangeState = true;
 
   }
 })()
