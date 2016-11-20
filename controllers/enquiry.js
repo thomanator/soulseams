@@ -3,7 +3,7 @@ function enquiry() {
 	var config = require('../config.js')
 	var enquiryModel = require(config.dir+'/models/enquiry.js')
 	var nodemailer = require('nodemailer')
-	
+	var xoauth2 = require('xoauth2')	
 
 
 	this.enquiry = function(req,res) {
@@ -15,9 +15,16 @@ function enquiry() {
 			data: null
 		}	
 		var obj = req.body
+		var authToken = xoauth2.createXOAuth2Generator({
+		    user: "soulseams@gmail.com",
+		    clientId: "1050902198756-c22eokqgr0mlduv0n4arpqbpb541p3km.apps.googleusercontent.com",
+		    clientSecret: "TBc6Knb20TLMaN6yBSnOBJoA",
+		    refreshToken: "1/5aCwuSWgrQ6DWWYT8Q-8UwMadAcSYfQoKQLWkjmwWMs"    
+		});
+
 		async.parallel([
-			selfMail.bind(null,obj),
-			customerMail.bind(null,obj),
+			selfMail.bind(null,obj,authToken),
+			customerMail.bind(null,obj,authToken),
 			enquiryModel.insert.bind(null,obj)
 		],function(err) {
 			if(err) {
@@ -29,26 +36,24 @@ function enquiry() {
 		})
 	}
 
-	function selfMail(obj,cb) {
+	function selfMail(obj,authToken,cb) {
 		var text = 'Customer name: '+obj.name+'\n'+'Customer email: '+obj.email+'\n'+'Customer number: '+obj.number+'\n'+'Description: '+obj.description
 		var smtpTransport = require("nodemailer-smtp-transport")
 		console.log('Smtp transport',smtpTransport)
 		var smtpTransport = nodemailer.createTransport(smtpTransport({
 		    service: 'gmail',
-		    auth : {
-		        user : "soulseams@gmail.com",
-		        pass : ""
+		    auth: {
+		      xoauth2 : authToken
 		    }
 		}))		
 
-
+		console.log('NAME',obj.name)
 		var mailOptions = {
 			from : "soulseams@gmail.com",
 	        to : "soulseams@gmail.com",
-	        subject : "New Enquiry",
+	        subject : obj.name + ' - New Enquiry',
 	        text : text,
 		}
-
 		smtpTransport.sendMail(mailOptions, function(error, response){
 	        if(error){
 	        	console.log('error',error)
@@ -61,14 +66,13 @@ function enquiry() {
 	    })		
 	}
 
-	function customerMail(obj,cb) {
+	function customerMail(obj,authToken,cb) {
 		var text = 'Thanks for reaching out to us. Someone from our team will be reaching out to you very soon'+'\n\n'+'We make clothes that matter,'+'Soul Seams'
 		var smtpTransport = require("nodemailer-smtp-transport")
 		var smtpTransport = nodemailer.createTransport(smtpTransport({
 		    service: 'gmail',
-		    auth : {
-		        user : "soulseams@gmail.com",
-		        pass : ""
+		    auth: {
+		      xoauth2 : authToken
 		    }
 		}))		
 
