@@ -33,9 +33,10 @@
         $timeout(function() {
           $scope.showText = false;
           $state.go(toState, toParams);
+          console.log("state changed");
         }, 1000)
       }
-      console.log(toState);
+    //  console.log(toState);
     });
 
     // $scope.lastScrollTop = 0;
@@ -58,7 +59,7 @@
 
     $scope.$on('$destroy', function() {
       $scope.showText = false;
-      unRegisterListener();
+     unRegisterListener();
       ScrollerService._unbindScroll($element);
     });
 

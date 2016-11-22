@@ -746,6 +746,30 @@ footer {
   bottom: 120px;
 }
 
+.scroll-indicator-container{
+  display: flex;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  bottom: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left:50px;
+}
+.scroll-indicator-container .scroll-indicator{
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  margin:8px 0;
+  width: 8px;
+  height: 8px;
+  cursor:pointer;
+  transition: all 500ms linear;
+}
+.scroll-indicator-container .active{
+  background-color: #fff;
+}
+
 @media screen and (max-width: 768px) {
   .caption-good-day {
     min-width: 182px;
@@ -766,28 +790,8 @@ footer {
     padding-top: 80px !important;
     padding-bottom: 100px;
   }
-}
 
-.scroll-indicator-container{
-  display: flex;
-  position: absolute;
-  z-index: 9999;
-  top: 0;
-  bottom: 0;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  left:50px;
-}
-.scroll-indicator-container .scroll-indicator{
-  background-color: rgba(255,255,255,0.2);
-  border-radius: 50%;
-  margin:5px 0;
-  width: 10px;
-  height: 10px;
-  cursor:pointer;
-  transition: all 500ms linear;
-}
-.scroll-indicator-container .active{
-  background-color: #EC962C;
+  .scroll-indicator-container{
+    display: none;
+  }
 }

@@ -2,7 +2,7 @@
   angular.module('app')
   .service('ScrollerService',ScrollerService);
 
-  function ScrollerService($state,appData){
+  function ScrollerService($state,$timeout, appData){
 
     this.switchState = function(state){
       $state.go(this.states[state]);
@@ -29,7 +29,9 @@
       }
       //this.switchState(this.activeState);
       //console.log(appData.activeState);
-      $state.go(appData.states[appData.activeState].state);
+      $timeout(function(){
+        $state.go(appData.states[appData.activeState].state);
+      },900);
       appData.canChangeState = false;
       return appData.activeState;
     };
