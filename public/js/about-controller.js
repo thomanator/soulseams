@@ -19,7 +19,7 @@
     $scope.next = next;
     $scope.prev = prev;
 
-      ScrollerService._bindScroll($element);
+      ScrollerService._bindScroll($element,1);
 
     $timeout(function() {
       $scope.showDiv = true;
@@ -102,9 +102,6 @@
         });
       }
     }
-
-    appData.activeState = 1;
-    appData.canChangeState = true;
 
   }
 })()

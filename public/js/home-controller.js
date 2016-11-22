@@ -54,7 +54,7 @@
     //   console.log($scope.direction);
     // });
 
-    ScrollerService._bindScroll($element);
+    ScrollerService._bindScroll($element,0);
 
     $scope.$on('$destroy', function() {
       $scope.showText = false;
@@ -62,8 +62,7 @@
       ScrollerService._unbindScroll($element);
     });
 
-    appData.activeState = 0;
-    appData.canChangeState = true;
+
 
   }
 })()

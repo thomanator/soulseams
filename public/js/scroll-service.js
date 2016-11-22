@@ -13,7 +13,7 @@
       if(!appData.canChangeState){
         return;
       }
-      if(e.wheelDelta > 0) {
+      if(e.deltaY > 0) {
         appData.activeState-=1;
         if(appData.activeState < 0){
           appData.activeState = 0;
@@ -34,12 +34,14 @@
       return appData.activeState;
     };
 
-    this._bindScroll = function(element){
-      element.bind('mousewheel',this.detectScroll);
+    this._bindScroll = function(element,activeState){
+      element.bind('wheel',this.detectScroll);
+      appData.activeState = activeState;
+      appData.canChangeState = true;
     };
 
     this._unbindScroll = function(element){
-      element.unbind('mousewheel',this.detectScroll);
+      element.unbind('wheel',this.detectScroll);
     };
 
 

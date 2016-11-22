@@ -81,7 +81,7 @@
       return re.test(email);
     }
 
-      ScrollerService._bindScroll($element);
+      ScrollerService._bindScroll($element,2);
 
     function valid () {
       var valid = true;
@@ -130,8 +130,6 @@
       return valid;
     }
 
-    appData.activeState = 2;
-    appData.canChangeState = true;
 
   }
 })()
