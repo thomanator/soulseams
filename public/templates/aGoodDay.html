@@ -24,8 +24,10 @@
   </div>
   <!-- <input type="checkbox" ng-model="showDiv" id="showDiv" />  -->
   <div class="caption inline caption-good-day">
-    <div ng-class="{'fadeInUp': showText && !removeText, 'fadeOut': removeText}" ng-show="showText">
-      A <span class="color-yellow medium"> Good </span> Day
+    <div ng-class="{'fadeInUp': showText && !removeText, 'fadeOut': removeText}">
+      <span ng-show="showText">
+        A <span class="color-yellow medium"> Good </span> Day
+      </span>
     </div>
     <div class="col-xs-12 no-padding good-day-orange-line" style="height:2px; position: absolute;">
       <div class="line background-color-yellow line-left" ng-class="{'remove': !showDiv, 'line-animation-right-60': showDiv, 'line-right': !showDiv}"></div>
