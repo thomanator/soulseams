@@ -6,8 +6,8 @@ app.use(express.static(__dirname + '/public'))
 app.use(bodyParser.json())
 
 
-require('./routes.js')(app)
-app.listen(7000,function() {
+// require('./routes.js')(app)
+app.listen(7001,function() {
   console.log('The app is running on port 7000')
 })
 
@@ -22,6 +22,7 @@ dbPool(function(err) {
 		app.listen(7000,function() {
 			console.log('The app is running on port 7000')
  		})
- 	}	
+ 	}
 })
+
 

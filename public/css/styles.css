@@ -32,6 +32,15 @@ body {
   src: url(../fonts/Gotham-Black.otf) format('truetype');
 }
 
+.collapsing {
+  position: relative;
+  /*height: 0;*/
+  overflow: hidden;
+  -webkit-transition: none;
+       -o-transition: none;
+          transition: none;
+}
+
 .gotham-bold {
   font-family: 'gotham-bold' !important;
 }
@@ -110,7 +119,7 @@ body {
 .align-left {
   float: left;
   margin-left: 75%;
-  width: 0; 
+  width: 0;
 }
 
 .child {
@@ -349,15 +358,16 @@ footer {
     float: right;
   }
   .navbar-collapse {
-    width: 100%;
+    width: 100% !important;
     opacity: .95;
     bottom: 0px;
     right: 0px;
     left: 0px;
     top: 0px;
+    height: 100% !important;
     max-height: 100% !important;
     background-color: rgb(16, 16, 16);
-    position: fixed;
+    position: fixed !important;
   }
 
   .navbar-collapse > .navbar-nav {
@@ -746,6 +756,30 @@ footer {
   bottom: 120px;
 }
 
+.scroll-indicator-container{
+  display: flex;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  bottom: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left:50px;
+}
+.scroll-indicator-container .scroll-indicator{
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  margin:8px 0;
+  width: 8px;
+  height: 8px;
+  cursor:pointer;
+  transition: all 500ms linear;
+}
+.scroll-indicator-container .active{
+  background-color: #fff;
+}
+
 @media screen and (max-width: 768px) {
   .caption-good-day {
     min-width: 182px;
@@ -765,5 +799,9 @@ footer {
     padding-left: 0px !important;
     padding-top: 80px !important;
     padding-bottom: 100px;
+  }
+
+  .scroll-indicator-container{
+    display: none;
   }
 }

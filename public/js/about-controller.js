@@ -19,7 +19,20 @@
     $scope.next = next;
     $scope.prev = prev;
 
-      ScrollerService._bindScroll($element);
+      ScrollerService._bindScroll($element,1);
+
+    // $timeout(function() {
+    //   $scope.showDiv = true;
+    //   $timeout(function() {
+    //     $scope.showText = true;
+    //     $timeout(function() {
+    //       $scope.showLine = true;
+    //       $timeout(function() {
+    //         $scope.showNote = true;
+    //       }, 700);
+    //     }, 1000)
+    //   }, 1150);
+    // }, 5);
 
     $timeout(function() {
       $scope.showDiv = true;
@@ -31,8 +44,8 @@
             $scope.showNote = true;
           }, 700);
         }, 1000)
-      }, 1150);
-    }, 5);
+      }, 550);
+    }, 1);
 
     function next () {
       $state.go('contact');
@@ -46,14 +59,14 @@
       if($scope.showDiv) {
         event.preventDefault();
         $scope.showDiv = false;
-        $timeout(function() {
+        // $timeout(function() {
           $scope.removeText = true;
           $scope.showNote = false;
           $timeout(function() {
           $scope.showText = false;
             $state.go(toState, toParams);
           }, 900);
-        }, 1000)
+        // }, 1000)
       }
       console.log(toState);
     });
@@ -102,9 +115,6 @@
         });
       }
     }
-
-    appData.activeState = 1;
-    appData.canChangeState = true;
 
   }
 })()

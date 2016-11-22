@@ -81,7 +81,7 @@
       return re.test(email);
     }
 
-      ScrollerService._bindScroll($element);
+      ScrollerService._bindScroll($element,2);
 
     function valid () {
       var valid = true;
@@ -99,7 +99,7 @@
         $scope.error += 'Number';
         valid = false;
       }
-      
+
       if(!$scope.contact.description || !$scope.contact.description.trim().length) {
         if($scope.error.length) {
           $scope.error += ', ';
@@ -107,14 +107,14 @@
         $scope.error += 'Description';
         valid = false;
       }
-      
+
       if(!$scope.contact.email || !$scope.contact.email.trim().length) {
         if($scope.error.length) {
           $scope.error += ', ';
         }
         $scope.error += 'Email ID';
         valid = false;
-      }      
+      }
       if($scope.error.length) {
         $scope.error += ' is/are required.';
         valid = false;
@@ -131,13 +131,11 @@
         $scope.error += ' Please enter a valid email id.'
         valid = false;
       }
-      
+
       console.log($scope.error, valid);
       return valid;
     }
 
-    appData.activeState = 2;
-    appData.canChangeState = true;
 
   }
 })()

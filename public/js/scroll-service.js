@@ -2,7 +2,7 @@
   angular.module('app')
   .service('ScrollerService',ScrollerService);
 
-  function ScrollerService($state,appData){
+  function ScrollerService($state,$timeout, appData){
 
     this.switchState = function(state){
       $state.go(this.states[state]);
@@ -13,7 +13,7 @@
       if(!appData.canChangeState){
         return;
       }
-      if(e.wheelDelta > 0) {
+      if(e.deltaY > 0) {
         appData.activeState-=1;
         if(appData.activeState < 0){
           appData.activeState = 0;
@@ -29,17 +29,21 @@
       }
       //this.switchState(this.activeState);
       //console.log(appData.activeState);
-      $state.go(appData.states[appData.activeState].state);
+      $timeout(function(){
+        $state.go(appData.states[appData.activeState].state);
+      },900);
       appData.canChangeState = false;
       return appData.activeState;
     };
 
-    this._bindScroll = function(element){
-      element.bind('mousewheel',this.detectScroll);
+    this._bindScroll = function(element,activeState){
+      element.bind('wheel',this.detectScroll);
+      appData.activeState = activeState;
+      appData.canChangeState = true;
     };
 
     this._unbindScroll = function(element){
-      element.unbind('mousewheel',this.detectScroll);
+      element.unbind('wheel',this.detectScroll);
     };
 
 
