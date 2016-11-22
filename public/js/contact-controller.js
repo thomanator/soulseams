@@ -86,10 +86,12 @@
     function valid () {
       var valid = true;
       $scope.error = '';
-      if(!$scope.contact.name || !$scope.contact.name.trim().length) {
+
+      if(!$scope.contact.name || !$scope.contact.name.trim().length||!$scope.contact.number || !$scope.contact.number.length||!$scope.contact.email || !$scope.contact.email.trim().length) {
         valid = false;
-        $scope.error = 'Name';
+        $scope.error = '* Kindly enter your Name, Number and a valid Email ID.';
       }
+      /*
       if(!$scope.contact.number || !$scope.contact.number.length) {
         if($scope.error.length) {
           $scope.error += ', ';
@@ -97,6 +99,7 @@
         $scope.error += 'Number';
         valid = false;
       }
+      
       if(!$scope.contact.description || !$scope.contact.description.trim().length) {
         if($scope.error.length) {
           $scope.error += ', ';
@@ -104,28 +107,31 @@
         $scope.error += 'Description';
         valid = false;
       }
+      
       if(!$scope.contact.email || !$scope.contact.email.trim().length) {
         if($scope.error.length) {
           $scope.error += ', ';
         }
         $scope.error += 'Email ID';
         valid = false;
-      }
-
+      }      
       if($scope.error.length) {
         $scope.error += ' is/are required.';
         valid = false;
       }
+      */
 
       if($scope.contact.number && $scope.contact.number.length > 10){
-        $scope.error += ' Enter a valid phone number.';
+        $scope.error += ' Please enter a valid phone number.';
         valid = false;
       }
 
       if($scope.contact.email && !validateEmail($scope.contact.email)) {
-        $scope.error += ' Enter a valid email id.'
+        console.log('Coming here to email check')
+        $scope.error += ' Please enter a valid email id.'
         valid = false;
       }
+      
       console.log($scope.error, valid);
       return valid;
     }
