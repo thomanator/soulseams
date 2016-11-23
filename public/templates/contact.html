@@ -22,7 +22,7 @@
         <div class="heading-20"> Provide us your custom apparel requirement below.</div>
         <br/>
         <input type="text" name="name" ng-model="contact.name" class="custom-input form-control" placeholder="Name" spellcheck="false">
-        <input type="text" name="number" ng-model="contact.number" class="custom-input form-control" placeholder="Contact Number" num-limit spellcheck="false">
+        <input type="text" name="number" ng-model="contact.number" class="custom-input form-control" placeholder="Contact Number" num-limit spellcheck="false" minlength="10">
         <input type="email" name="email" ng-model="contact.email" class="custom-input form-control" placeholder="Email ID" spellcheck="false">
         <textarea class="custom-input form-control" ng-model="contact.description" placeholder="Describe your requirement (optional)" spellcheck="false"></textarea>
         <!-- <input type="date" name="deliveryDate" class="custom-input form-control" placeholder="Expected delivery date">

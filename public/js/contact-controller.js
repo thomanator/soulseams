@@ -121,7 +121,7 @@
       }
       */
 
-      if($scope.contact.number && $scope.contact.number.length > 10){
+      if($scope.contact.number && $scope.contact.number.length < 10){
         $scope.error += ' Please enter a valid phone number.';
         valid = false;
       }
