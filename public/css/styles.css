@@ -127,6 +127,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
 }
 
 .navbar-toggle {
@@ -344,7 +345,7 @@ footer {
   }
 
   .caption-bg {
-    font-size: 24px !important;
+    font-size: 30px !important;
   }
 }
 
