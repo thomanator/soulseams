@@ -334,6 +334,20 @@ footer {
   }
 }
 
+@media screen and (max-width: 440px) {
+  .icon  {
+    left: 35px !important;
+  }
+
+  .caption {
+    font-size: 26px !important;
+  }
+
+  .caption-bg {
+    font-size: 24px !important;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .content-small  {
     font-size: 18px !important;
@@ -346,6 +360,9 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  .overlay-content {
+    width: 80%;
+  }
   .icon > img {
     width: 70px;
   }

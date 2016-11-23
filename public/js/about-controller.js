@@ -44,7 +44,7 @@
             $scope.showNote = true;
           }, 700);
         }, 1000)
-      }, 550);
+      }, 150);
     }, 1);
 
     function next () {
