@@ -11,6 +11,7 @@ function enquiry() {
 			return cb(null)
 		})
 	}
+
 }
 
 module.exports = new enquiry()

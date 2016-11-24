@@ -86,11 +86,12 @@
     function valid () {
       var valid = true;
       $scope.error = '';
-
-      if(!$scope.contact.name || !$scope.contact.name.trim().length||!$scope.contact.number || !$scope.contact.number.length||!$scope.contact.email || !$scope.contact.email.trim().length) {
+      console.log($scope.error)
+      if(!$scope.contact.name || !$scope.contact.name.trim().length||!$scope.contact.email || !$scope.contact.email.trim().length||!$scope.contact.number) {
         valid = false;
-        $scope.error = '* Kindly enter your Name, Number and a valid Email ID.';
-      }
+        console.log('Coming to the error check block')
+        $scope.error = '* Please enter your Name, valid Email ID and Phone Number';
+      }      
       /*
       if(!$scope.contact.number || !$scope.contact.number.length) {
         if($scope.error.length) {
@@ -119,12 +120,14 @@
         $scope.error += ' is/are required.';
         valid = false;
       }
-      */
-
-      if($scope.contact.number && $scope.contact.number.length > 10){
-        $scope.error += ' Please enter a valid phone number.';
+      
+      
+      if(!$scope.contact.number) {
+        console.log('coming to the second error check')
+        $scope.error = 'please enter a valid phone number'
         valid = false;
       }
+      */
 
       if($scope.contact.email && !validateEmail($scope.contact.email)) {
         console.log('Coming here to email check')

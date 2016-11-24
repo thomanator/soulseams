@@ -12,7 +12,7 @@
           Drop your email id and we will get back to you
 
           <br/><br/>
-          <input type="email" name="email" ng-model="email" class="custom-input form-control" placeholder="Email ID">
+          <input type="email" name="email" ng-model="email" class="custom-input form-control" placeholder="Email ID" spellcheck="false">
           <div class="color-yellow" style="font-size: 12px" ng-show="error.length">{{error}} </div>
           <br/>
           <button class="btn background-color-yellow color-white" ng-click="submit()"> SUBMIT </button>
@@ -24,8 +24,10 @@
   </div>
   <!-- <input type="checkbox" ng-model="showDiv" id="showDiv" />  -->
   <div class="caption inline caption-good-day">
-    <div ng-class="{'fadeInUp': showText && !removeText, 'fadeOut': removeText}" ng-show="showText">
-      A <span class="color-yellow medium"> Good </span> Day
+    <div ng-class="{'fadeInUp': showText && !removeText, 'fadeOut': removeText}">
+      <span ng-show="showText">
+        A <span class="color-yellow medium"> Good </span> Day
+      </span>
     </div>
     <div class="col-xs-12 no-padding good-day-orange-line" style="height:2px; position: absolute;">
       <div class="line background-color-yellow line-left" ng-class="{'remove': !showDiv, 'line-animation-right-60': showDiv, 'line-right': !showDiv}"></div>
@@ -33,10 +35,10 @@
   </div>
   <div class="col-xs-12 no-padding" ng-class="{'fadeInUp': showText && !removeText, 'fadeOut': removeText}">
     <div class="col-xs-12 no-padding content-small" ng-show="showText">
-      <div> <i>We promise a proportion of the proceeds <br class="hidden-xs" /> from all of our customer projects towards making clothes for children who need them. <br class="hidden-xs"/> Our plan is to set up pop-up shops and give each child the experience of getting to pick up what they'd like to wear.<br class="hidden-xs"/> On this day, we hope to bring everyone together for a fun time and ensure they leave with a smile!</i>
+      <div> <i>We promise a proportion of the proceeds from all of our <br class="hidden-xs" />customer projects towards making clothes for children who need them. <br class="hidden-xs"/> Our plan is to set up pop-up shops and give each child the experience of <br class="hidden-xs"/>getting to pick up what they'd like to wear. Let's take this <br class="hidden-xs"/>one day, one deed, one smile at a time.</i>
       </div>
       <br/> <br/>
-      <div class="heading-20"> <i> A Good Day Today, A <span class="color-yellow bold">Better Day Tomorrow</span> ! </i></div>
+      <div class="heading-20"> <i> A Good Day Today, A <span class="color-yellow bold">Better Tomorrow</span>! </i></div>
     </div>
   </div>
   <!-- <div class="col-xs-12" style="margin-top: 110px;"></div> -->

@@ -13,7 +13,7 @@
       if(!appData.canChangeState){
         return;
       }
-      if(e.deltaY > 0) {
+      if(e.deltaY < 0) {
         appData.activeState-=1;
         if(appData.activeState < 0){
           appData.activeState = 0;

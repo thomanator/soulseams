@@ -32,6 +32,15 @@ body {
   src: url(../fonts/Gotham-Black.otf) format('truetype');
 }
 
+.collapsing {
+  position: relative;
+  /*height: 0;*/
+  overflow: hidden;
+  -webkit-transition: none;
+       -o-transition: none;
+          transition: none;
+}
+
 .gotham-bold {
   font-family: 'gotham-bold' !important;
 }
@@ -118,6 +127,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
 }
 
 .navbar-toggle {
@@ -325,6 +335,20 @@ footer {
   }
 }
 
+@media screen and (max-width: 440px) {
+  .icon  {
+    left: 35px !important;
+  }
+
+  .caption {
+    font-size: 26px !important;
+  }
+
+  .caption-bg {
+    font-size: 32px !important;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .content-small  {
     font-size: 18px !important;
@@ -337,6 +361,9 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  .overlay-content {
+    width: 80%;
+  }
   .icon > img {
     width: 70px;
   }
@@ -349,15 +376,16 @@ footer {
     float: right;
   }
   .navbar-collapse {
-    width: 100%;
+    width: 100% !important;
     opacity: .95;
     bottom: 0px;
     right: 0px;
     left: 0px;
     top: 0px;
+    height: 100% !important;
     max-height: 100% !important;
     background-color: rgb(16, 16, 16);
-    position: fixed;
+    position: fixed !important;
   }
 
   .navbar-collapse > .navbar-nav {

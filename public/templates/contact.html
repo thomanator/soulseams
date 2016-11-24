@@ -19,12 +19,12 @@
 
         <div> Drop your <span class="color-yellow bold">details</span></div> 
         <br/>
-        <div class="heading-16"> Provide us your custom apparel requirement below.</div>
+        <div class="heading-20"> Provide us your custom apparel requirement below.</div>
         <br/>
-        <input type="text" name="name" ng-model="contact.name" class="custom-input form-control" placeholder="Name">
-        <input type="text" name="number" ng-model="contact.number" class="custom-input form-control" placeholder="Contact Number" num-limit>
-        <input type="email" name="email" ng-model="contact.email" class="custom-input form-control" placeholder="Email ID">
-        <textarea class="custom-input form-control" ng-model="contact.description" placeholder="Describe your requirement (optional)"></textarea>
+        <input type="text" name="name" ng-model="contact.name" class="custom-input form-control" placeholder="Name" spellcheck="false">
+        <input type="text" name="number" ng-model="contact.number" class="custom-input form-control" placeholder="Contact Number" num-limit spellcheck="false" minlength="10">
+        <input type="email" name="email" ng-model="contact.email" class="custom-input form-control" placeholder="Email ID" spellcheck="false">
+        <textarea class="custom-input form-control" ng-model="contact.description" placeholder="Describe your requirement (optional)" spellcheck="false"></textarea>
         <!-- <input type="date" name="deliveryDate" class="custom-input form-control" placeholder="Expected delivery date">
         <input type="number" name="count" class="custom-input form-control" placeholder="Expected number of units"> -->
         <div class="color-yellow" style="font-size: 12px" ng-show="error.length">{{error}} </div>

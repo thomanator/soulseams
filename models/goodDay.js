@@ -18,7 +18,6 @@ function goodDayModel() {
 			return cb(obj,null)
 		})
 	}
-
 }
 
 module.exports = new goodDayModel() 
