@@ -10,14 +10,29 @@ function goodDay() {
 		}
 		var obj = req.body
 		console.log('Good day model',goodDayModel)
-		goodDayModel.insert(obj,function(err) {
+
+		goodDayModel.findOne(obj,function(item,err) {
 			if(err) {
 				resJson['message'] = err
 				return res.json(resJson)
+			}	
+			console.log(item)
+			if(item==null) {
+				console.log('no item')
+				goodDayModel.insert(obj,function(err) {
+					if(err) {
+						resJson['message'] = err
+						return res.json(resJson)
+					}
+					resJson['status'] = 'success'
+					return res.json(resJson)
+				})
 			}
-			resJson['status'] = 'success'
-			return res.json(resJson)
-		})
+			else {
+				resJson['status'] = 'success'
+				return res.json(resJson)
+			}
+		})			
 	}
 }
 
