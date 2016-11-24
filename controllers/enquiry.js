@@ -67,7 +67,7 @@ function enquiry() {
 	}
 
 	function customerMail(obj,authToken,cb) {
-		var text = 'Thanks for reaching out to us. Someone from our team will be reaching out to you very soon'+'\n\n'+'We make clothes that matter,'+'Soul Seams'
+		var text = 'Thanks for reaching out to us. Someone from our team will be reaching out to you very soon'+'\n\n\n'+'We make clothes that matter,\n'+'Soul Seams'
 		var smtpTransport = require("nodemailer-smtp-transport")
 		var smtpTransport = nodemailer.createTransport(smtpTransport({
 		    service: 'gmail',
