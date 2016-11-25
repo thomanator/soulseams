@@ -21,7 +21,7 @@ function goodDay() {
 				console.log('no item')
 				goodDayModel.insert(obj,function(err) {
 					if(err) {
-						resJson['message'] = err
+						resJson['message'] = 'Oops! Looks like something went wrong.'
 						return res.json(resJson)
 					}
 					resJson['status'] = 'success'
