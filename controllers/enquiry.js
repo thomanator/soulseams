@@ -17,9 +17,9 @@ function enquiry() {
 		var obj = req.body
 		var authToken = xoauth2.createXOAuth2Generator({
 		    user: "soulseams@gmail.com",
-		    clientId: "1050902198756-c22eokqgr0mlduv0n4arpqbpb541p3km.apps.googleusercontent.com",
-		    clientSecret: "TBc6Knb20TLMaN6yBSnOBJoA",
-		    refreshToken: "1/5aCwuSWgrQ6DWWYT8Q-8UwMadAcSYfQoKQLWkjmwWMs"    
+		    clientId: "",
+		    clientSecret: "",
+		    refreshToken: ""    
 		});
 
 		async.parallel([
