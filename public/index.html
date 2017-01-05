@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Soul Seams</title>
+  <link rel="shortcut icon" href="/images/drib.png" />
+
+  <!-- Bootstrap Core CSS -->
+  <link href="/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="/css/styles.css" rel="stylesheet">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Angular Libs -->
+  <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
+  <script type="text/javascript" src="/lib/angular/angular-ui-router.js"></script>
+  <script type="text/javascript" src="/lib/angular/angular-animate.js"></script>
+
+  <!-- Custom Angular modules -->
+  <script type="text/javascript" src="/js/app-module.js"></script>
+  <script type="text/javascript" src="/js/config.js"></script>
+  <script type="text/javascript" src="/js/scroll-service.js"></script>
+  <script type="text/javascript" src="/js/limit-directive.js"></script>
+  <script type="text/javascript" src="/js/home-controller.js"></script>
+  <script type="text/javascript" src="/js/about-controller.js"></script>
+  <script type="text/javascript" src="/js/contact-controller.js"></script>
+  <script type="text/javascript" src="/js/links-controller.js"></script>
+  <script type="text/javascript" src="/js/scroll-indicator-directive/scroll-indicator.js"></script>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!-- [if lt IE 9]
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  [endif] -->
+
+</head>
+
+<body>
+
+    <scroll-indicator></scroll-indicator>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <img src="/images/side_nav_hamburger.png" width="20px">
+          <!-- <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span> -->
+        </button>
+        <a class="navbar-brand" ui-sref="home">
+          <table>
+            <tr>
+              <td class="hidden-xs" width="30px"></td>
+              <td style="padding-top: 15px">
+                <img src="/images/soulseams_logo.png" width="45px" />
+              </td>
+              <!-- <td style="font-size: 12px; font-weight: 600;" ng-class="{'color-white': module == 'home'}">SOULSEAMS</td> -->
+              <td style="padding-top: 15px; padding-left: 20px;font-size: 14px; font-weight: 600;" class='color-white'><span class="gotham-black">SOUL</span><span class="gotham-book">SEAMS</span></td>
+            </tr>
+          </table>
+        </a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
+        <div class="close-btn pull-right visible-xs" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><img src="/images/cross.png" width="30px"/></div>
+        <!-- <div class="visible-xs pull-right" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <i style="font-size: 20px; padding: 30px;cursor: pointer;display: inline-block;"> X </i></div> -->
+        <ul class="nav navbar-nav">
+          <li class="pull-right" style="width: 40px; height: 10px"></li>
+          <li class="pull-right hidden-xs">
+            <a ui-sref="link" class="padding-top-lg" ng-class="{'color-white': module == 'link'}">LINKS</a>
+          </li>
+          <li class="pull-right hidden-xs">
+            <a ui-sref="contact" class="padding-top-lg" ng-class="{'color-white': module == 'partner'}">ORDER</a>
+          </li>
+          <li class="pull-right hidden-xs">
+            <a ui-sref="about" class="padding-top-lg" ng-class="{'color-white': module == 'about'}">A GOOD DAY</a>
+          </li>
+          <li class="visible-xs" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <a ui-sref="home" class="padding-top-lg" ng-class="{'color-white': module == 'home'}">SOULSEAMS</a>
+          </li>
+          <li class="visible-xs" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <a ui-sref="about" class="padding-top-lg" ng-class="{'color-white': module == 'about'}">A GOOD DAY</a>
+          </li>
+          <li class="visible-xs" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <a ui-sref="contact" class="padding-top-lg" ng-class="{'color-white': module == 'partner'}">ORDER</a>
+          </li>
+          <li class="visible-xs" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <a ui-sref="link" class="padding-top-lg" ng-class="{'color-white': module == 'link'}">LINKS</a>
+          </li>
+          <!-- <li class="visible-xs" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <a ui-sref="partner" class="padding-top-lg" ng-class="{'color-white': module == 'partner'}">CONTACT US</a>
+          </li> -->
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+  <div class="content parent page-animation" ui-view>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <ul class="nav navbar-nav custom-nav color-white pull-right" style="margin: 0px">
+      <!--   
+      <li class="custom-li" style="text-align: right;">
+        <a class="color-white" href="https://facebook.com" target="_blank">FACEBOOK</a>
+      </li>
+      -->
+      <li class="custom-li">
+        <a class="color-white" href="https://facebook.com/soulseams" target="_blank">FACEBOOK</a>
+      </li>
+      <li class="hidden-xs" style="width: 40px; height: 10px"></li>
+    </ul>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="/lib/jquery/jquery.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="/lib/bootstrap/bootstrap.min.js"></script>
+
+</body>
+
+</html>
