@@ -46,7 +46,7 @@ body {
 }
 
 .links-heading {
-  height: 150px;
+  height: 100px;
 }
 
 .gotham-bold {
@@ -331,6 +331,14 @@ footer {
 
 .icon > img {
   width: 110px;
+}
+
+.icon.link {
+  top: calc(50% - 35px) !important;
+}
+
+.icon.link > img {
+  /*width: 80px !important;*/
 }
 
 @media screen and (min-width: 768px) {
@@ -791,7 +799,8 @@ footer {
   display: flex;
   position: absolute;
   z-index: 9999;
-  top: 0;
+  /*top: 0;*/
+  top: -100px;
   bottom: 0;
   flex-direction: column;
   align-items: center;

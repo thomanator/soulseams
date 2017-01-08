@@ -8,7 +8,7 @@ app.use(bodyParser.json())
 
 require('./routes.js')(app)
 app.listen(7001,function() {
-  console.log('The app is running on port 7000')
+  console.log('The app is running on port 7001')
 })
 
 
