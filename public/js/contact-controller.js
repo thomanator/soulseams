@@ -32,11 +32,9 @@
         $timeout(function() {
           $scope.showText = false;
           $scope.navigate = true;
-          console.log('go to ' + toState);
           $state.go(toState, toParams);
         }, 1000)
       }
-      console.log(toState);
     });
 
     $scope.$on('$destroy', function() {
@@ -59,7 +57,6 @@
           method: 'POST',
           data: $scope.contact
         }).then(function (data) {
-          console.log('success ', data);
           if(data.data.status == 'success') {
             $scope.showSuccessMessage = true;
             $scope.contact = {};
@@ -69,7 +66,6 @@
             $scope.errorMessage = data.data.message || 'Could not complete your request. Please try later';
           }
         }, function (error) {
-          console.log('error', error);
           $scope.showErrorMessage = true;
           $scope.errorMessage = error.data.statusText;
         });
@@ -86,10 +82,8 @@
     function valid () {
       var valid = true;
       $scope.error = '';
-      console.log($scope.error)
       if(!$scope.contact.name || !$scope.contact.name.trim().length||!$scope.contact.email || !$scope.contact.email.trim().length||!$scope.contact.number) {
         valid = false;
-        console.log('Coming to the error check block')
         $scope.error = '* Please enter your Name, valid Email ID and Phone Number';
       }      
       /*
@@ -130,12 +124,9 @@
       */
 
       if($scope.contact.email && !validateEmail($scope.contact.email)) {
-        console.log('Coming here to email check')
         $scope.error += ' Please enter a valid email id.'
         valid = false;
       }
-
-      console.log($scope.error, valid);
       return valid;
     }
 

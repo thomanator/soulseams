@@ -21,7 +21,6 @@
     }, 5);
 
     function next () {
-      console.log('about');
       $state.go('about');
     }
 
@@ -33,7 +32,6 @@
         $timeout(function() {
           $scope.showText = false;
           $state.go(toState, toParams);
-          console.log("state changed");
         }, 1000)
       }
     //  console.log(toState);

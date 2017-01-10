@@ -29,11 +29,9 @@
         $timeout(function() {
           $scope.showText = false;
           $scope.navigate = true;
-          console.log('go to ' + toState);
           $state.go(toState, toParams);
         }, 1000)
       }
-      console.log(toState);
     });
 
     $scope.$on('$destroy', function() {

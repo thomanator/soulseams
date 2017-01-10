@@ -68,7 +68,6 @@
           }, 900);
         // }, 1000)
       }
-      console.log(toState);
     });
 
     $scope.$on('$destroy', function() {
@@ -83,7 +82,6 @@
     }
 
     function showToast () {
-      console.log('showToast', $scope.getEmailId);
       $scope.getEmailId = true;
     }
 
@@ -96,7 +94,6 @@
             email: $scope.email
           }
         }).then(function (data) {
-          console.log('success ', data);
           if(data.data.status == 'success') {
             $scope.getEmailId = false;
             $scope.successMessage = true;
@@ -108,7 +105,6 @@
             $scope.errorMessage = data.data.message || '. Please try later';
           }
         }, function (error) {
-          console.log('error', error);
           $scope.getEmailId = false;
           $scope.showErrorMessage = true;
           $scope.errorMessage = error.statusText;
